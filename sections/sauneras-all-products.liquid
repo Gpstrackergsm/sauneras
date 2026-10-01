@@ -134,21 +134,21 @@
               <!-- Dual Action Buttons -->
               <div class="sauneras-card-actions">
                 {%- assign current_variant = product.selected_or_first_available_variant -%}
-                <button 
-                  type="button" 
+                <a 
+                  href="/cart/{{ current_variant.id }}:1" 
                   class="sauneras-btn-instant-cart"
-                  onclick="saunerasDirectAdd({{ current_variant.id }}, this)"
+                  style="text-decoration: none;"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="9" cy="21" r="1"></circle>
                     <circle cx="20" cy="21" r="1"></circle>
                     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                   </svg>
-                  <span>Add to Cart & Checkout</span>
-                </button>
+                  <span>Order Now • Direct Checkout</span>
+                </a>
 
                 <a href="{{ product.url }}" class="sauneras-btn-details-link">
-                  <span>View Full Details & Specs →</span>
+                  <span>View Details & Specs →</span>
                 </a>
               </div>
             </div>
@@ -214,10 +214,10 @@
               <div class="sauneras-card-actions">
                 {%- assign product_url = '/products/' | append: block.settings.handle -%}
                 <a href="{{ block.settings.custom_link | default: product_url }}" class="sauneras-btn-instant-cart" style="text-decoration: none;">
-                  <span>Add to Cart & Checkout</span>
+                  <span>Order Now • Direct Checkout</span>
                 </a>
                 <a href="{{ block.settings.custom_link | default: product_url }}" class="sauneras-btn-details-link">
-                  <span>View Full Details & Specs →</span>
+                  <span>View Details & Specs →</span>
                 </a>
               </div>
             </div>
@@ -254,47 +254,14 @@
 </section>
 
 <script>
-  async function saunerasDirectAdd(variantId, btn) {
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '<span>Adding...</span>';
-    btn.disabled = true;
-    try {
-      const res = await fetch('/cart/add.js', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items: [{ id: variantId, quantity: 1 }] })
-      });
-      if (!res.ok) throw new Error('Cart add failed');
-
-      btn.innerHTML = '<span>✓ Added to Cart!</span>';
-      
-      const cartDrawer = document.querySelector('cart-drawer');
-      if (cartDrawer) {
-        const drawerRes = await fetch('/?section_id=cart-drawer');
-        const text = await drawerRes.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-        const newDrawerInner = doc.querySelector('#CartDrawer');
-        const currentDrawerInner = document.querySelector('#CartDrawer');
-        if (newDrawerInner && currentDrawerInner) {
-          currentDrawerInner.innerHTML = newDrawerInner.innerHTML;
-        }
-        cartDrawer.open();
-      } else {
-        window.location.href = '/cart';
-      }
-    } catch (e) {
-      console.log('Error adding to cart:', e);
-      window.location.href = '/cart';
-    } finally {
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.disabled = false;
-      }, 2500);
-    }
-  }
-
   document.addEventListener('DOMContentLoaded', function() {
+    // Ensure any open drawer from previous click is closed on load
+    const openDrawer = document.querySelector('cart-drawer.active');
+    if (openDrawer) {
+      openDrawer.classList.remove('active', 'animate');
+      document.body.classList.remove('overflow-hidden');
+    }
+
     const filterButtons = document.querySelectorAll('.sauneras-filter-btn');
     const productCards = document.querySelectorAll('.sauneras-product-card');
 

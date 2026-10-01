@@ -904,10 +904,15 @@
   margin-bottom: 2px;
 }
 
-.sauneras-trust-pillar p {
-  margin: 0;
-  font-size: 0.82rem;
-  color: var(--sauneras-text-muted);
+/* Ensure cart drawer never stays stuck open or causes phantom white space */
+cart-drawer:not(.active) {
+  display: none !important;
+  visibility: hidden !important;
 }
+
+cart-drawer.active .drawer__inner {
+  max-width: 440px;
+}
+
 
 
