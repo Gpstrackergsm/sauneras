@@ -1,0 +1,178 @@
+<section class="sauneras-hero-section color-{{ section.settings.color_scheme }}">
+  <div class="sauneras-hero-container">
+    <div class="sauneras-hero-content">
+      {%- if section.settings.badge_text != blank -%}
+        <div class="sauneras-badge">
+          <span class="pulse-dot"></span>
+          {{ section.settings.badge_text }}
+        </div>
+      {%- endif -%}
+
+      <h1 class="sauneras-hero-title">
+        {{ section.settings.heading | replace: '[highlight]', '<span>' | replace: '[/highlight]', '</span>' }}
+      </h1>
+
+      <p class="sauneras-hero-subtitle">
+        {{ section.settings.subheading }}
+      </p>
+
+      <div class="sauneras-hero-actions">
+        {%- if section.settings.primary_button_label != blank -%}
+          <a href="{{ section.settings.primary_button_link }}" class="sauneras-btn-primary">
+            {{ section.settings.primary_button_label }}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        {%- endif -%}
+
+        {%- if section.settings.secondary_button_label != blank -%}
+          <a href="{{ section.settings.secondary_button_link }}" class="sauneras-btn-secondary">
+            {{ section.settings.secondary_button_label }}
+          </a>
+        {%- endif -%}
+      </div>
+
+      <div class="sauneras-trust-row">
+        <div class="sauneras-trust-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <span>4.9/5 Rating (2,400+ Reviews)</span>
+        </div>
+        <div class="sauneras-trust-item">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>30-Day Risk-Free Trial</span>
+        </div>
+        <div class="sauneras-trust-item">
+          <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <span>Free Express Shipping</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sauneras-hero-visual">
+      <div class="sauneras-hero-card">
+        <div class="sauneras-hero-img-wrap">
+          {%- if section.settings.image != blank -%}
+            <img 
+              src="{{ section.settings.image | image_url: width: 1000 }}" 
+              alt="{{ section.settings.image.alt | default: 'Sauneras Portable Steam Sauna' }}"
+              width="1000"
+              height="850"
+              loading="eager"
+            >
+          {%- else -%}
+            <!-- Premium SVG Sauna Illustration if no image uploaded yet -->
+            <svg viewBox="0 0 500 420" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: radial-gradient(circle at 50% 60%, #2A4537 0%, #15241C 100%);">
+              <!-- Glow back -->
+              <circle cx="250" cy="220" r="160" fill="#CF6E3C" opacity="0.18" filter="blur(30px)" />
+              
+              <!-- Sauna Tent outline -->
+              <path d="M130 350 L180 120 C185 105 195 95 210 95 L290 95 C305 95 315 105 320 120 L370 350 Z" fill="#1C2F25" stroke="#486D58" stroke-width="4" />
+              
+              <!-- Front zippered flap window -->
+              <path d="M210 140 L290 140 C296 140 300 144 300 150 L300 230 C300 236 296 240 290 240 L210 240 C204 240 200 236 200 230 L200 150 C200 144 204 140 210 140 Z" fill="#14211A" stroke="#CF6E3C" stroke-width="2.5" />
+              <path d="M250 140 L250 350" stroke="#CF6E3C" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Steam Generator box on side -->
+              <rect x="380" y="270" width="70" height="80" rx="8" fill="#FFFFFF" opacity="0.95" />
+              <rect x="390" y="280" width="50" height="20" rx="4" fill="#1A2420" />
+              <text x="415" y="294" fill="#CF6E3C" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">140°F</text>
+              <circle cx="400" cy="325" r="8" fill="#E5E0D8" />
+              <circle cx="430" cy="325" r="8" fill="#CF6E3C" />
+              
+              <!-- Steam hose connecting to tent -->
+              <path d="M380 300 C350 300 365 320 345 320" stroke="#A8BDB4" stroke-width="6" fill="none" stroke-linecap="round" />
+              
+              <!-- Steam vapor waves -->
+              <path d="M235 125 C230 100 245 80 235 55" stroke="#FFFFFF" stroke-width="2.5" opacity="0.4" fill="none" stroke-linecap="round" />
+              <path d="M255 120 C250 90 268 70 258 45" stroke="#FFFFFF" stroke-width="3" opacity="0.6" fill="none" stroke-linecap="round" />
+              <path d="M275 125 C270 100 285 80 275 60" stroke="#FFFFFF" stroke-width="2.5" opacity="0.4" fill="none" stroke-linecap="round" />
+              
+              <!-- Base floor platform -->
+              <ellipse cx="250" cy="365" rx="190" ry="25" fill="#0C1510" opacity="0.6" />
+            </svg>
+          {%- endif -%}
+
+          <div class="sauneras-hero-spec-pill top-right">
+            <span style="display:inline-block; width:8px; height:8px; background:#22C55E; border-radius:50%;"></span>
+            Rapid Steam in 5 Mins
+          </div>
+
+          <div class="sauneras-hero-spec-pill bottom-left">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CF6E3C" stroke-width="2.5"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            Up to 140°F Smart Heat
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sauneras Hero Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "#1 At-Home Wellness Spa 2026"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading (Use [highlight]text[/highlight] for accent)",
+      "default": "Your Personal [highlight]Thermal Sanctuary[/highlight] Anytime, Anywhere"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Experience the restorative power of therapeutic steam and deep penetrating infrared heat. Relieve stiffness, detoxify impurities, and recharge your energy in under 20 minutes a day."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "Primary Button Label",
+      "default": "Shop Portable Saunas"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "Secondary Button Label",
+      "default": "See How It Works"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link",
+      "default": "#how-it-works"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sauneras Hero Banner"
+    }
+  ]
+}
+{% endschema %}

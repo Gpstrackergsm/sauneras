@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" fill="none">
+  <!-- Sauna Steam Waves Icon -->
+  <g transform="translate(10, 8)">
+    <!-- Base / Vessel line -->
+    <path d="M4 36C12 40 28 40 36 36" stroke="#C86A3B" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Steam Wave 1 -->
+    <path d="M12 28C10 23 15 20 13 14C11 8 16 5 14 0" stroke="#C86A3B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Steam Wave 2 (Taller center) -->
+    <path d="M20 30C18 24 23 19 21 12C19 6 23 3 21 -2" stroke="#2D4739" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Steam Wave 3 -->
+    <path d="M28 28C26 23 31 20 29 14C27 8 32 5 30 0" stroke="#C86A3B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Subtle warmth droplet / glow dot -->
+    <circle cx="21" cy="-6" r="2" fill="#C86A3B"/>
+  </g>
+
+  <!-- Typography: SAUNERAS -->
+  <text x="65" y="38" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" letter-spacing="3" fill="#1A2421">SAUNERAS</text>
+  
+  <!-- Subtitle: AT-HOME WELLNESS & SPA -->
+  <text x="67" y="50" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="600" letter-spacing="2.2" fill="#75827B">PORTABLE HOME SPA</text>
+</svg>

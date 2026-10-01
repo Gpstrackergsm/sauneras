@@ -1,0 +1,256 @@
+{
+  "sections": {
+    "sauneras_hero": {
+      "type": "sauneras-hero",
+      "settings": {
+        "badge_text": "#1 AT-HOME PORTABLE WELLNESS SPA",
+        "heading": "Your Personal [highlight]Thermal Sanctuary[/highlight] Anytime, Anywhere",
+        "subheading": "Experience medical-grade steam and deep penetrating infrared heat right at home. Flush toxins, soothe stiff joints, burn calories, and sleep deeper in just 20 minutes a day.",
+        "primary_button_label": "Shop Portable Saunas",
+        "primary_button_link": "/collections/all",
+        "secondary_button_label": "See How It Works",
+        "secondary_button_link": "#how-it-works",
+        "color_scheme": "scheme-4"
+      }
+    },
+    "sauneras_benefits": {
+      "type": "sauneras-benefits",
+      "blocks": {
+        "benefit_detox": {
+          "type": "benefit",
+          "settings": {
+            "icon": "detox",
+            "title": "Deep Cellular Detox",
+            "text": "Induce a profuse, purifying sweat that helps flush accumulated environmental toxins and unclogs deep pores for radiant, clear skin."
+          }
+        },
+        "benefit_muscle": {
+          "type": "benefit",
+          "settings": {
+            "icon": "muscle",
+            "title": "Rapid Muscle & Joint Relief",
+            "text": "Deep penetrating warmth boosts blood circulation by up to 200%, soothing stiff joints and accelerating post-workout muscle recovery."
+          }
+        },
+        "benefit_calorie": {
+          "type": "benefit",
+          "settings": {
+            "icon": "calorie",
+            "title": "Calorie Burn & Metabolism",
+            "text": "A 20-minute thermal session elevates cardiovascular heart rate mimicking moderate cardio, burning up to 400-600 calories while resting."
+          }
+        },
+        "benefit_sleep": {
+          "type": "benefit",
+          "settings": {
+            "icon": "sleep",
+            "title": "Restorative Sleep & Calm",
+            "text": "Naturally lowers cortisol stress hormones and stimulates melatonin production, priming your body for deep, uninterrupted sleep."
+          }
+        },
+        "benefit_setup": {
+          "type": "benefit",
+          "settings": {
+            "icon": "setup",
+            "title": "Pop-Up in 60 Seconds",
+            "text": "No contractors, zero tools, and no 240V rewiring needed. Simply unfold, plug into standard wall outlet, and enjoy anywhere."
+          }
+        },
+        "benefit_safety": {
+          "type": "benefit",
+          "settings": {
+            "icon": "safety",
+            "title": "Smart Anti-Dry Safety",
+            "text": "Equipped with intelligent dry-run auto shut-off, multi-layer thermal insulation, and low-EMF certified safety."
+          }
+        }
+      },
+      "block_order": [
+        "benefit_detox",
+        "benefit_muscle",
+        "benefit_calorie",
+        "benefit_sleep",
+        "benefit_setup",
+        "benefit_safety"
+      ],
+      "settings": {
+        "sub_heading": "CLINICALLY PROVEN WELLNESS",
+        "heading": "Why 15,000+ Wellness Seekers Choose Sauneras",
+        "description": "Transform your daily wellness routine with targeted hyperthermic therapy engineered for cellular renewal and immediate stress relief.",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Most Popular Sauneras Collections",
+        "heading_size": "h2",
+        "description": "<p>Explore our portable steam boxes, full-spectrum infrared saunas, and botanical infusion accessories.</p>",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "sauneras_how_it_works": {
+      "type": "sauneras-how-it-works",
+      "settings": {
+        "sub_heading": "EFFORTLESS SPA RITUAL",
+        "heading": "Your Home Spa in 3 Simple Steps",
+        "description": "Designed for apartments, homes, patios, and bedrooms. No plumbing or expensive remodeling required.",
+        "button_label": "Shop Sauneras Systems",
+        "button_link": "/collections/all",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "sauneras_comparison": {
+      "type": "sauneras-comparison",
+      "settings": {
+        "sub_heading": "THE SMART CHOICE",
+        "heading": "Sauneras vs Traditional Wooden Saunas",
+        "description": "Get all the high-heat therapeutic benefits of a traditional Finnish sauna at a fraction of the cost, footprint, and maintenance.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "sauneras_testimonials": {
+      "type": "sauneras-testimonials",
+      "blocks": {
+        "rev_1": {
+          "type": "review",
+          "settings": {
+            "review_title": "Better than our gym sauna by miles!",
+            "review_body": "No more waiting in line or sitting in dirty communal saunas. I put eucalyptus oil in the herbal steamer, pop my arms out to hold my book, and sweat for 25 mins every evening. Sleeping like a baby!",
+            "author_name": "Marcus D.",
+            "product_purchased": "Sauneras Pro 1600W Box"
+          }
+        },
+        "rev_2": {
+          "type": "review",
+          "settings": {
+            "review_title": "Unbelievable sweat and so easy to pack away",
+            "review_body": "Living in a small apartment, I didn't think I could ever own a sauna. It literally folds flat into the closet when not in use. Heats up to 140°F fast and the fabric quality is thick and durable.",
+            "author_name": "Elena R.",
+            "product_purchased": "Sauneras Home Steam Spa"
+          }
+        },
+        "rev_3": {
+          "type": "review",
+          "settings": {
+            "review_title": "Game changer for marathon recovery",
+            "review_body": "As a runner, my joints take a heavy beating. Doing 20 minutes in my Sauneras right after long runs has cut my delayed muscle soreness in half. Best wellness investment I have made.",
+            "author_name": "David K.",
+            "product_purchased": "Sauneras Infrared Pro"
+          }
+        }
+      },
+      "block_order": [
+        "rev_1",
+        "rev_2",
+        "rev_3"
+      ],
+      "settings": {
+        "sub_heading": "PROVEN SATISFACTION",
+        "heading": "Real Sweats. Real Transformation.",
+        "description": "Read how thousands of busy professionals, athletes, and wellness lovers integrated Sauneras into their daily recovery ritual.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "sauneras_guarantee": {
+      "type": "sauneras-guarantee",
+      "settings": {
+        "heading": "Try Sauneras Risk-Free In Your Home For 30 Days",
+        "text": "Take 30 days to sweat, relax, and detox in the privacy of your home. If you don't feel noticeably lighter, sleep more deeply, and recover faster, return it for a 100% refund. We cover the risk so you don't have to.",
+        "button_label": "Claim Your 30-Day Trial",
+        "button_link": "/collections/all",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "sauneras_faq": {
+      "type": "sauneras-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "How hot does the Sauneras steam box get?",
+            "answer": "The Sauneras high-output steam generator reaches up to 135°F - 145°F (57°C - 63°C) across 9-15 adjustable digital heat levels. Because steam has 100% relative humidity, 140°F feels intensely hot and induces a deep, profuse sweat equivalent to a 190°F traditional dry wooden sauna."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does it take to set up and start steaming?",
+            "answer": "The tent uses a pop-up frame that expands in under 60 seconds. Simply place the foldable chair and sweat mat inside, fill the steamer with water, connect the insulated hose, and plug it into any wall outlet. Thick therapeutic steam starts filling the tent in just 5-8 minutes."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I add essential oils or herbal botanicals?",
+            "answer": "Yes! Every Sauneras system includes a dedicated herbal infusion diffuser box. You can drop natural essential oils (such as eucalyptus, peppermint, lavender) or fresh dried herbs to transform your session into an authentic therapeutic aromatherapy spa."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I clean and store it after a sweat session?",
+            "answer": "The multi-layer Oxford waterproof lining repels moisture. Simply wipe down the floor mat and interior walls with a dry microfiber cloth or antibacterial spray. Leave the zipper open for 10 minutes to dry completely, then fold it flat into its included carry duffle bag."
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "What is the electrical consumption & safety certification?",
+            "answer": "Sauneras plugs into standard 110V/120V household wall outlets. At 1000W-1600W, a typical 25-minute session costs less than $0.15 in electricity. It features automatic dry-burn shut-off, high-pressure relief valve, and anti-leak certification."
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your return policy and warranty?",
+            "answer": "Every Sauneras comes with our 30-Day In-Home Money Back Guarantee. If you don't feel noticeably more relaxed and rejuvenated, return it for a prompt refund. You also receive a full 1-Year Manufacturer Warranty on the generator and frame."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
+      "settings": {
+        "sub_heading": "FREQUENTLY ASKED QUESTIONS",
+        "heading": "Got Questions? We've Got You Covered.",
+        "description": "Everything you need to know about setting up, operating, and enjoying your Sauneras portable spa.",
+        "color_scheme": "scheme-2"
+      }
+    }
+  },
+  "order": [
+    "sauneras_hero",
+    "sauneras_benefits",
+    "featured_collection",
+    "sauneras_how_it_works",
+    "sauneras_comparison",
+    "sauneras_testimonials",
+    "sauneras_guarantee",
+    "sauneras_faq"
+  ]
+}
