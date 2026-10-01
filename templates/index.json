@@ -6,11 +6,20 @@
         "badge_text": "#1 AT-HOME PORTABLE WELLNESS SPA",
         "heading": "Your Personal [highlight]Thermal Sanctuary[/highlight] Anytime, Anywhere",
         "subheading": "Experience medical-grade steam and deep penetrating infrared heat right at home. Flush toxins, soothe stiff joints, burn calories, and sleep deeper in just 20 minutes a day.",
-        "primary_button_label": "Shop Portable Saunas",
-        "primary_button_link": "shopify://collections/all",
-        "secondary_button_label": "See How It Works",
+        "primary_button_label": "Shop All 28 Models",
+        "primary_button_link": "",
+        "secondary_button_label": "How It Works",
         "secondary_button_link": "",
         "color_scheme": "scheme-4"
+      }
+    },
+    "sauneras_all_products": {
+      "type": "sauneras-all-products",
+      "settings": {
+        "sub_heading": "COMPLETE 2026 CATALOG",
+        "heading": "Explore All 28 Sauneras™ Home Spa Models",
+        "description": "Select your ideal at-home thermal sanctuary below. All units feature medical-grade safety, fast multi-level heat control, free express delivery, and our 30-day in-home risk-free trial.",
+        "color_scheme": "scheme-1"
       }
     },
     "sauneras_benefits": {
@@ -78,15 +87,6 @@
         "heading": "Why 15,000+ Wellness Seekers Choose Sauneras",
         "description": "Transform your daily wellness routine with targeted hyperthermic therapy engineered for cellular renewal and immediate stress relief.",
         "color_scheme": "scheme-2"
-      }
-    },
-    "sauneras_featured_products": {
-      "type": "sauneras-featured-products",
-      "settings": {
-        "sub_heading": "FLAGSHIP MODELS",
-        "heading": "Sauneras™ Portable Sauna Collection",
-        "description": "Medical-grade thermal engineering meets modern portable convenience. Engineered for daily detoxification, deep muscle recovery, and quiet relaxation.",
-        "color_scheme": "scheme-1"
       }
     },
     "sauneras_how_it_works": {
@@ -226,8 +226,8 @@
   },
   "order": [
     "sauneras_hero",
+    "sauneras_all_products",
     "sauneras_benefits",
-    "sauneras_featured_products",
     "sauneras_how_it_works",
     "sauneras_comparison",
     "sauneras_testimonials",
