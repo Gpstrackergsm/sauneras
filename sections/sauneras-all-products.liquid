@@ -1,6 +1,6 @@
 <section class="sauneras-section color-{{ section.settings.color_scheme }}" id="all-products">
   <div class="sauneras-container">
-    <div class="sauneras-header-center" style="margin-bottom: 32px;">
+    <div class="sauneras-header-center" style="margin-bottom: 24px;">
       <div class="sauneras-badge sauneras-badge-green">
         {{ section.settings.sub_heading }}
       </div>
@@ -12,20 +12,20 @@
     <div class="sauneras-urgency-banner">
       <div class="sauneras-urgency-pill">
         <span class="sauneras-pulse-dot"></span>
-        <span><strong>FLASH SALE ACTIVE:</strong> Save up to $80 Today</span>
+        <span><strong>FLASH SALE ACTIVE:</strong> Up to 35% OFF Storewide</span>
       </div>
       <div class="sauneras-urgency-pill">
-        <span>🚚 <strong>Free Express Shipping:</strong> In Stock for Immediate Dispatch</span>
+        <span>🚚 <strong>Free Tracked Express Shipping:</strong> In Stock for Immediate Dispatch</span>
       </div>
       <div class="sauneras-urgency-pill">
-        <span>🛡️ <strong>30-Day In-Home Sweat Trial:</strong> 100% Money-Back Guarantee</span>
+        <span>🛡️ <strong>30-Day Risk-Free In-Home Sweat Trial:</strong> 100% Money-Back Guarantee</span>
       </div>
     </div>
 
     <!-- Interactive Category Filter Bar -->
     <div class="sauneras-filter-bar">
       <button type="button" class="sauneras-filter-btn active" data-filter="all">
-        All Models ({{ section.blocks.size }})
+        All Models
       </button>
       <button type="button" class="sauneras-filter-btn" data-filter="steam">
         💨 Steam Saunas
@@ -41,105 +41,189 @@
       </button>
     </div>
 
+    {%- assign target_collection = section.settings.collection | default: collections['all'] -%}
+    {%- assign product_limit = section.settings.products_to_show | default: 50 -%}
+
     <!-- Product Grid -->
     <div class="sauneras-product-grid" id="saunerasProductGrid">
-      {%- for block in section.blocks -%}
-        <div 
-          class="sauneras-product-card" 
-          data-category="{{ block.settings.category }}"
-          {{ block.shopify_attributes }}
-        >
-          <!-- Media thumbnail wrap -->
-          <div class="sauneras-card-media-wrap">
-            {%- if block.settings.badge != blank -%}
-              <span class="sauneras-card-badge">{{ block.settings.badge }}</span>
-            {%- endif -%}
+      {%- if target_collection.products.size > 0 -%}
+        {%- for product in target_collection.products limit: product_limit -%}
+          {%- liquid
+            assign p_type = product.type | downcase
+            assign p_title = product.title | downcase
+            if p_type contains 'infrared' or p_title contains 'infrared' or p_title contains 'red light'
+              assign cat = 'infrared'
+              assign spec_tag = '660nm/850nm Red Light'
+              assign badge_text = 'POPULAR'
+            elsif p_type contains '2-person' or p_title contains '2 person' or p_title contains 'two person'
+              assign cat = 'twoperson'
+              assign spec_tag = 'Dual Chair Capacity'
+              assign badge_text = 'COUPLES PICK'
+            elsif p_type contains 'thermometer' or p_title contains 'thermometer' or p_title contains 'hygrometer'
+              assign cat = 'accessories'
+              assign spec_tag = 'Precision 2-in-1 Gauge'
+              assign badge_text = 'ESSENTIAL'
+            else
+              assign cat = 'steam'
+              assign spec_tag = 'Foldable Chair Included'
+              assign badge_text = 'BESTSELLER'
+            endif
+          -%}
 
-            {%- if block.settings.specs != blank -%}
-              <span class="sauneras-card-specs">{{ block.settings.specs }}</span>
-            {%- endif -%}
+          <div class="sauneras-product-card" data-category="{{ cat }}">
+            <!-- Media thumbnail wrap -->
+            <div class="sauneras-card-media-wrap">
+              <span class="sauneras-card-badge">{{ badge_text }}</span>
+              <span class="sauneras-card-specs">{{ spec_tag }}</span>
 
-            {%- if block.settings.image != blank -%}
-              <img 
-                src="{{ block.settings.image | image_url: width: 800 }}" 
-                alt="{{ block.settings.title | escape }}" 
-                width="800" 
-                height="800" 
-                loading="lazy" 
-                class="sauneras-card-img"
-              >
-            {%- elsif block.settings.image_url != blank -%}
-              <img 
-                src="{{ block.settings.image_url }}" 
-                alt="{{ block.settings.title | escape }}" 
-                width="800" 
-                height="800" 
-                loading="lazy" 
-                class="sauneras-card-img"
-              >
-            {%- endif -%}
-          </div>
-
-          <!-- Content Details -->
-          <div class="sauneras-card-body">
-            <!-- Stock & Delivery Urgency -->
-            <div class="sauneras-card-stock-notice">
-              <span class="sauneras-stock-indicator"></span>
-              <span>In Stock • Dispatches in 24h</span>
-            </div>
-
-            <!-- Stars & Trust -->
-            <div class="sauneras-card-rating">
-              <span class="stars">★★★★★</span>
-              <span class="reviews-count">4.9/5.0 (Verified Buyers)</span>
-            </div>
-
-            <h3 class="sauneras-product-title">
-              {{ block.settings.title }}
-            </h3>
-
-            <!-- Pricing Box -->
-            <div class="sauneras-pricing-row">
-              <span class="sauneras-price-current">{{ block.settings.price }}</span>
-              {%- if block.settings.compare_price != blank -%}
-                <span class="sauneras-price-compare">{{ block.settings.compare_price }}</span>
-                <span class="sauneras-savings-tag">SAVE {{ block.settings.savings }}</span>
+              {%- if product.featured_media != blank -%}
+                <img 
+                  src="{{ product.featured_media | image_url: width: 800 }}" 
+                  alt="{{ product.title | escape }}" 
+                  width="800" 
+                  height="800" 
+                  loading="lazy" 
+                  class="sauneras-card-img"
+                >
+              {%- else -%}
+                <img 
+                  src="https://m.media-amazon.com/images/I/71wAOO+FF1L._AC_SL1500_.jpg" 
+                  alt="{{ product.title | escape }}" 
+                  width="800" 
+                  height="800" 
+                  loading="lazy" 
+                  class="sauneras-card-img"
+                >
               {%- endif -%}
             </div>
 
-            <!-- Value Package Checklist -->
-            <div class="sauneras-card-features">
-              <div class="sauneras-feature-point">✓ Multi-Layer Insulated Thermal Tent</div>
-              <div class="sauneras-feature-point">✓ Reinforced Folding Spa Chair Included</div>
-              <div class="sauneras-feature-point">✓ 30-Day Risk-Free Money Back Guarantee</div>
-            </div>
+            <!-- Content Details -->
+            <div class="sauneras-card-body">
+              <div class="sauneras-card-stock-notice">
+                <span class="sauneras-stock-indicator"></span>
+                <span>In Stock • Ready for Same-Day Dispatch</span>
+              </div>
 
-            <!-- Dual Action Buttons -->
-            <div class="sauneras-card-actions">
-              {%- assign product_url = '/products/' | append: block.settings.handle -%}
-              <button 
-                type="button" 
-                class="sauneras-btn-instant-cart"
-                onclick="saunerasQuickAdd('{{ block.settings.handle }}', this)"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="21" r="1"></circle>
-                  <circle cx="20" cy="21" r="1"></circle>
-                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
-                <span>Add to Cart & Checkout</span>
-              </button>
+              <div class="sauneras-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews-count">4.9/5.0 (Verified Buyer Reviews)</span>
+              </div>
 
-              <a 
-                href="{{ block.settings.custom_link | default: product_url }}" 
-                class="sauneras-btn-details-link"
-              >
-                <span>View Full Details & Specs →</span>
-              </a>
+              <h3 class="sauneras-product-title">
+                {{ product.title }}
+              </h3>
+
+              <!-- Pricing Box -->
+              <div class="sauneras-pricing-row">
+                <span class="sauneras-price-current">{{ product.price | money }}</span>
+                {%- if product.compare_at_price > product.price -%}
+                  <span class="sauneras-price-compare">{{ product.compare_at_price | money }}</span>
+                  <span class="sauneras-savings-tag">
+                    SAVE {{ product.compare_at_price | minus: product.price | money }}
+                  </span>
+                {%- endif -%}
+              </div>
+
+              <!-- Value Package Checklist -->
+              <div class="sauneras-card-features">
+                <div class="sauneras-feature-point">✓ Multi-Layer Insulated Thermal Tent</div>
+                <div class="sauneras-feature-point">✓ Reinforced Folding Spa Chair Included</div>
+                <div class="sauneras-feature-point">✓ 30-Day Risk-Free Money Back Guarantee</div>
+              </div>
+
+              <!-- Dual Action Buttons -->
+              <div class="sauneras-card-actions">
+                {%- assign current_variant = product.selected_or_first_available_variant -%}
+                <button 
+                  type="button" 
+                  class="sauneras-btn-instant-cart"
+                  onclick="saunerasDirectAdd({{ current_variant.id }}, this)"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  <span>Add to Cart & Checkout</span>
+                </button>
+
+                <a href="{{ product.url }}" class="sauneras-btn-details-link">
+                  <span>View Full Details & Specs →</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      {%- endfor -%}
+        {%- endfor -%}
+      {%- elsif section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          <div 
+            class="sauneras-product-card" 
+            data-category="{{ block.settings.category }}"
+            {{ block.shopify_attributes }}
+          >
+            <div class="sauneras-card-media-wrap">
+              {%- if block.settings.badge != blank -%}
+                <span class="sauneras-card-badge">{{ block.settings.badge }}</span>
+              {%- endif -%}
+
+              {%- if block.settings.specs != blank -%}
+                <span class="sauneras-card-specs">{{ block.settings.specs }}</span>
+              {%- endif -%}
+
+              {%- if block.settings.image_url != blank -%}
+                <img 
+                  src="{{ block.settings.image_url }}" 
+                  alt="{{ block.settings.title | escape }}" 
+                  width="800" 
+                  height="800" 
+                  loading="lazy" 
+                  class="sauneras-card-img"
+                >
+              {%- endif -%}
+            </div>
+
+            <div class="sauneras-card-body">
+              <div class="sauneras-card-stock-notice">
+                <span class="sauneras-stock-indicator"></span>
+                <span>In Stock • Ready for Same-Day Dispatch</span>
+              </div>
+
+              <div class="sauneras-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews-count">4.9/5.0 (Verified Buyer Reviews)</span>
+              </div>
+
+              <h3 class="sauneras-product-title">
+                {{ block.settings.title }}
+              </h3>
+
+              <div class="sauneras-pricing-row">
+                <span class="sauneras-price-current">{{ block.settings.price }}</span>
+                {%- if block.settings.compare_price != blank -%}
+                  <span class="sauneras-price-compare">{{ block.settings.compare_price }}</span>
+                  <span class="sauneras-savings-tag">SAVE {{ block.settings.savings }}</span>
+                {%- endif -%}
+              </div>
+
+              <div class="sauneras-card-features">
+                <div class="sauneras-feature-point">✓ Multi-Layer Insulated Thermal Tent</div>
+                <div class="sauneras-feature-point">✓ Reinforced Folding Spa Chair Included</div>
+                <div class="sauneras-feature-point">✓ 30-Day Risk-Free Money Back Guarantee</div>
+              </div>
+
+              <div class="sauneras-card-actions">
+                {%- assign product_url = '/products/' | append: block.settings.handle -%}
+                <a href="{{ block.settings.custom_link | default: product_url }}" class="sauneras-btn-instant-cart" style="text-decoration: none;">
+                  <span>Add to Cart & Checkout</span>
+                </a>
+                <a href="{{ block.settings.custom_link | default: product_url }}" class="sauneras-btn-details-link">
+                  <span>View Full Details & Specs →</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
     </div>
 
     <!-- Bottom Trust & Safe Checkout Bar -->
@@ -170,31 +254,24 @@
 </section>
 
 <script>
-  async function saunerasQuickAdd(handle, btn) {
+  async function saunerasDirectAdd(variantId, btn) {
     const originalText = btn.innerHTML;
-    btn.innerHTML = '<span>Adding to Cart...</span>';
+    btn.innerHTML = '<span>Adding...</span>';
     btn.disabled = true;
     try {
-      const prodRes = await fetch('/products/' + handle + '.js');
-      if (!prodRes.ok) throw new Error('Product lookup failed');
-      const product = await prodRes.json();
-      const variantId = product.variants[0].id;
-      
-      const addRes = await fetch('/cart/add.js', {
+      const res = await fetch('/cart/add.js', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ items: [{ id: variantId, quantity: 1 }] })
       });
-      
-      if (!addRes.ok) throw new Error('Cart add failed');
-      
+      if (!res.ok) throw new Error('Cart add failed');
+
       btn.innerHTML = '<span>✓ Added to Cart!</span>';
       
-      // Open Dawn Cart Drawer
       const cartDrawer = document.querySelector('cart-drawer');
       if (cartDrawer) {
-        const res = await fetch('/?section_id=cart-drawer');
-        const text = await res.text();
+        const drawerRes = await fetch('/?section_id=cart-drawer');
+        const text = await drawerRes.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(text, 'text/html');
         const newDrawerInner = doc.querySelector('#CartDrawer');
@@ -207,8 +284,8 @@
         window.location.href = '/cart';
       }
     } catch (e) {
-      console.log('Redirecting to product page:', e);
-      window.location.href = '/products/' + handle;
+      console.log('Error adding to cart:', e);
+      window.location.href = '/cart';
     } finally {
       setTimeout(() => {
         btn.innerHTML = originalText;
@@ -271,6 +348,20 @@
       "default": "Select your ideal at-home thermal sanctuary below. All units feature medical-grade safety, fast multi-level heat control, free express delivery, and our 30-day in-home risk-free trial."
     },
     {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection Source (Defaults to All)"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 8,
+      "max": 50,
+      "step": 2,
+      "default": 30,
+      "label": "Maximum Products to Show"
+    },
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Color Scheme",
@@ -280,7 +371,7 @@
   "blocks": [
     {
       "type": "product_item",
-      "name": "Product Item",
+      "name": "Product Fallback",
       "settings": [
         {
           "type": "text",
@@ -332,11 +423,6 @@
           "label": "Image URL (High-Res)"
         },
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Custom Image File"
-        },
-        {
           "type": "text",
           "id": "handle",
           "label": "Product Handle"
@@ -351,401 +437,7 @@
   ],
   "presets": [
     {
-      "name": "Sauneras All Products",
-      "blocks": [
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Sauna - Collapsible Personal Steam Sauna",
-                        "price": "$149.99",
-                        "compare_price": "$199.99",
-                        "savings": "$50.00",
-                        "category": "steam",
-                        "badge": "BEST VALUE",
-                        "specs": "Foldable Chair Included",
-                        "image_url": "https://m.media-amazon.com/images/I/71h2LICSMVL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-sauna-collapsible-personal-steam-sauna-b0fxbf33cm"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Infrared Home Steam Sauna Box with 660nm 850nm Red Light Therapy",
-                        "price": "$159.99",
-                        "compare_price": "$215.99",
-                        "savings": "$56.00",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/71wAOO+FF1L._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-infrared-home-steam-sauna-box-with-660nm-850nm-red-l-b0gt7qlgh6"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Home Sauna, Dry Heat Sauna Box with Infrared Light",
-                        "price": "$199.00",
-                        "compare_price": "$268.65",
-                        "savings": "$69.65",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/81ba4zxBvRL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-home-sauna-dry-heat-sauna-box-with-infrared-light-b0hg7712dg"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Sauna Thermometer Fahrenheit, 2-in-1 Thermometer and Hygrometer, Precision Temperature Gauge & Thermostat for Portable Steam Sauna Box, Home Infrared Indoor Use Essential Accessory (Sliver)",
-                        "price": "$6.99",
-                        "compare_price": "$9.44",
-                        "savings": "$2.45",
-                        "category": "accessories",
-                        "badge": "ESSENTIAL",
-                        "specs": "Precision 2-in-1 Gauge",
-                        "image_url": "https://m.media-amazon.com/images/I/61mYpCaLF1L._AC_SL1500_.jpg",
-                        "handle": "sauneras-sauna-thermometer-fahrenheit-2-in-1-thermometer-and-hygromete-b0gx2cpwvv"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Steam Sauna Box, Infrared Sauna for Home, 660nm & 850nm Red Light Therapy, 99 Min Timer & 9 Temp Levels, 3L Steamer Remote Control Big Folding Chair, for Home Spa Detoxification",
-                        "price": "$199.99",
-                        "compare_price": "$269.99",
-                        "savings": "$70.00",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/71XtLl3jvwL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-steam-sauna-box-infrared-sauna-for-home-660nm-850nm--b0fnrdrhq4"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Sauna, Steam Sauna for Relaxation, Detox and Muscle Relief, Personal Indoor Sauna Box with 3L/1500W Steamer, 9 Levels Up to 140\u00b0F Portable Sauna for Home, Bedroom, Living Room",
-                        "price": "$139.99",
-                        "compare_price": "$188.99",
-                        "savings": "$49.00",
-                        "category": "steam",
-                        "badge": "BEST VALUE",
-                        "specs": "High-Power Fast Steamer",
-                        "image_url": "https://m.media-amazon.com/images/I/71LyfHklzLL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-sauna-steam-sauna-for-relaxation-detox-and-muscle-re-b0g1xdryp2"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Full Size Infrared Sauna for Home,Pentagonal Size Far Infrared Sauna,One Person Sauna Tent with Heating Foot Pad, Portable Chair, (L38 x W38 x H63, Grey)",
-                        "price": "$165.89",
-                        "compare_price": "$223.95",
-                        "savings": "$58.06",
-                        "category": "infrared",
-                        "badge": "TOP RATED",
-                        "specs": "Low-EMF Carbon Panels",
-                        "image_url": "https://m.media-amazon.com/images/I/71fdZTuY+DL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-full-size-infrared-sauna-for-home-pentagonal-size-fa-b0f17mcpyx"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Infrared Sauna Box for Home, 3L 1400W Steam Sauna Tent",
-                        "price": "$219.00",
-                        "compare_price": "$295.65",
-                        "savings": "$76.65",
-                        "category": "infrared",
-                        "badge": "PREMIUM",
-                        "specs": "High-Power Fast Steamer",
-                        "image_url": "https://m.media-amazon.com/images/I/816GSARbJPL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-infrared-sauna-box-for-home-3l-1400w-steam-sauna-ten-b0fx49ryvc"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Sauna Thermometer Fahrenheit and Hygrometer, Upgraded Lanyard-Mounted for Portable Steam Sauna Box, Ideal for Infrared/Indoor/Home Use, Essential Accessory and Gift for Enthusiasts",
-                        "price": "$9.99",
-                        "compare_price": "$13.49",
-                        "savings": "$3.50",
-                        "category": "accessories",
-                        "badge": "ESSENTIAL",
-                        "specs": "Precision 2-in-1 Gauge",
-                        "image_url": "https://m.media-amazon.com/images/I/71gqYbZMiQL._AC_SL1500_.jpg",
-                        "handle": "sauneras-sauna-thermometer-fahrenheit-and-hygrometer-upgraded-lanyard--b0fncvvhmg"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Home Infrared Sauna Box, 2-Panel Red Light Steam Sauna Tent",
-                        "price": "$189.98",
-                        "compare_price": "$256.47",
-                        "savings": "$66.49",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/71Y4gGGXXqL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-home-infrared-sauna-box-2-panel-red-light-steam-saun-b0h1hbbbll"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Steam Sauna Tent for Home with Transparent Door, Portable Indoor Sauna with Powerful Steam Heating, Foldable Personal Spa for Relaxation (Double Rectangular, Black)",
-                        "price": "$199.99",
-                        "compare_price": "$269.99",
-                        "savings": "$70.00",
-                        "category": "steam",
-                        "badge": "TOP RATED",
-                        "specs": "Foldable Chair Included",
-                        "image_url": "https://m.media-amazon.com/images/I/81EwD+oW5VL._AC_SL1500_.jpg",
-                        "handle": "sauneras-steam-sauna-tent-for-home-with-transparent-door-portable-indo-b0fn3cn6lf"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Sauna Box Infrared Right Light Portable Sauna Tent",
-                        "price": "$130.99",
-                        "compare_price": "$176.84",
-                        "savings": "$45.85",
-                        "category": "infrared",
-                        "badge": "BEST VALUE",
-                        "specs": "Low-EMF Carbon Panels",
-                        "image_url": "https://m.media-amazon.com/images/I/81KWoMrgVyL._AC_SL1500_.jpg",
-                        "handle": "sauneras-sauna-box-infrared-right-light-portable-sauna-tent-b0fpc1ps37"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Sauna Box Red Light Therapy - Portable Sauna for Home with 15 Levels Fast Heating, 3L/1200W Steamer and Non-Slip Mat, Remote Control for Body Relaxation, Steam Sauna for Indoor Use, 32\" x 32\" x 71\"",
-                        "price": "$139.99",
-                        "compare_price": "$188.99",
-                        "savings": "$49.00",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/71KfN+BsLQL._AC_SL1500_.jpg",
-                        "handle": "sauneras-sauna-box-red-light-therapy-portable-sauna-for-home-with-15-l-b0fscnvp1d"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Infrared Sauna Box for Home, Portable Dry Sauna for Relaxation",
-                        "price": "$49.99",
-                        "compare_price": "$67.49",
-                        "savings": "$17.50",
-                        "category": "infrared",
-                        "badge": "BEST VALUE",
-                        "specs": "Low-EMF Carbon Panels",
-                        "image_url": "https://m.media-amazon.com/images/I/71JM4PK63ML._AC_SL1500_.jpg",
-                        "handle": "sauneras-infrared-sauna-box-for-home-portable-dry-sauna-for-relaxation-b0hdp42z4k"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Infrared Sauna Box with 660nm Red Light Therapy & 850nm Infrared Light Panel, 3L Steamer, 9 Temp Levels & 99 Min Timer, 5-Layer Waterproof Insulated, Folding Chair, Personal Sauna for Home(Black)",
-                        "price": "$169.99",
-                        "compare_price": "$229.49",
-                        "savings": "$59.50",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/713PsSAXW7L._AC_SL1500_.jpg",
-                        "handle": "sauneras-infrared-sauna-box-with-660nm-red-light-therapy-850nm-infrare-b0h6x84z7h"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras SmartSteam Kit Pro Portable Home Steam Sauna | 1 Person Sauna Tent",
-                        "price": "$230.00",
-                        "compare_price": "$310.50",
-                        "savings": "$80.50",
-                        "category": "steam",
-                        "badge": "PREMIUM",
-                        "specs": "Foldable Chair Included",
-                        "image_url": "https://m.media-amazon.com/images/I/719bi8sJvLL._AC_SL1500_.jpg",
-                        "handle": "sauneras-smartsteam-kit-pro-portable-home-steam-sauna-1-person-sauna-t-b0f122w7c2"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras XL Infrared Sauna Box with True 660 & 850nm Red Light Therapy Lamp, Portable Red Light Sauna for Home, Full Body Steam Tent with 3L 1200w Steamer, 15 Levels Heat, Chair, Remote, 90 Min Timer",
-                        "price": "$159.99",
-                        "compare_price": "$215.99",
-                        "savings": "$56.00",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/81cNUSBEPML._AC_SL1500_.jpg",
-                        "handle": "sauneras-xl-infrared-sauna-box-with-true-660-850nm-red-light-therapy-l-b0fvsbhmdn"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Infrared Sauna Box, Portable Steam Infrared Sauna with Red Light Therapy for Body, Sauna Tent with 660nm & 850nm Infrared Red Light Therapy Lamp, 3L/1200W Steamer, 9 Levels Heat, Timer, Folding Chair",
-                        "price": "$229.99",
-                        "compare_price": "$310.49",
-                        "savings": "$80.50",
-                        "category": "infrared",
-                        "badge": "PREMIUM",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/81egcOAskwL._AC_SL1500_.jpg",
-                        "handle": "sauneras-infrared-sauna-box-portable-steam-infrared-sauna-with-red-lig-b0fyx1sq92"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Sauna, Steam Sauna Box for Home with 1500W Steamer",
-                        "price": "$149.99",
-                        "compare_price": "$202.49",
-                        "savings": "$52.50",
-                        "category": "steam",
-                        "badge": "BEST VALUE",
-                        "specs": "High-Power Fast Steamer",
-                        "image_url": "https://m.media-amazon.com/images/I/713ydC2w9UL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-sauna-steam-sauna-box-for-home-with-1500w-steamer-b0h7jfj9gw"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Sauna Box, Portable Steam Sauna for Home with 1000W 3L Steamer, 9-Level Temperature Control & Remote, with Foldable Chair, for Relaxation, Detox & Indoor/Outdoor Use (Infrared Red Light Sauna)",
-                        "price": "$129.99",
-                        "compare_price": "$175.49",
-                        "savings": "$45.50",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/71TJwDPZnRL._AC_SL1500_.jpg",
-                        "handle": "sauneras-sauna-box-portable-steam-sauna-for-home-with-1000w-3l-steamer-b0gc5m97x5"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Sauna Thermometer and Hygrometer, Precision Temperature & Humidity Gauge for Portable Steam Sauna Box, Home Infrared Indoor Use Essential Accessory for Enthusiasts",
-                        "price": "$14.99",
-                        "compare_price": "$20.24",
-                        "savings": "$5.25",
-                        "category": "accessories",
-                        "badge": "ESSENTIAL",
-                        "specs": "Precision 2-in-1 Gauge",
-                        "image_url": "https://m.media-amazon.com/images/I/71rs8alDALL._AC_SL1500_.jpg",
-                        "handle": "sauneras-sauna-thermometer-and-hygrometer-precision-temperature-humidi-b0gyrhfxkv"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Sauna Thermometer Fahrenheit and Hygrometer with Lanyard Mount",
-                        "price": "$11.99",
-                        "compare_price": "$16.19",
-                        "savings": "$4.20",
-                        "category": "accessories",
-                        "badge": "ESSENTIAL",
-                        "specs": "Precision 2-in-1 Gauge",
-                        "image_url": "https://m.media-amazon.com/images/I/71dmSGBwLPL._AC_SL1500_.jpg",
-                        "handle": "sauneras-sauna-thermometer-fahrenheit-and-hygrometer-with-lanyard-moun-b0h8dk3tym"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Sauna Thermometer and Hygrometer, Wall Mounted for Portable Steam Sauna Box",
-                        "price": "$4.99",
-                        "compare_price": "$6.74",
-                        "savings": "$1.75",
-                        "category": "accessories",
-                        "badge": "ESSENTIAL",
-                        "specs": "Precision 2-in-1 Gauge",
-                        "image_url": "https://m.media-amazon.com/images/I/71GczavVRXL._AC_SL1500_.jpg",
-                        "handle": "sauneras-sauna-thermometer-and-hygrometer-wall-mounted-for-portable-st-b0g2gq39l8"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Upgraded 2 Person Sauna, Portable Sauna with 5 Layer Waterproof, Portable Steam Sauna Tent with 2 Steamers, 2 Folding Chair, 71\u201dx 49\u201dx 36\"",
-                        "price": "$199.98",
-                        "compare_price": "$269.97",
-                        "savings": "$69.99",
-                        "category": "twoperson",
-                        "badge": "COUPLES PICK",
-                        "specs": "Dual Chair Capacity",
-                        "image_url": "https://m.media-amazon.com/images/I/714XhymI+uL._AC_SL1500_.jpg",
-                        "handle": "sauneras-upgraded-2-person-sauna-portable-sauna-with-5-layer-waterproo-b0gyjk298k"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Steam Sauna Tent for Home 3L Infrared Sauna for Indoor, Outdoor, Gym, Spa",
-                        "price": "$149.00",
-                        "compare_price": "$201.15",
-                        "savings": "$52.15",
-                        "category": "infrared",
-                        "badge": "BEST VALUE",
-                        "specs": "Low-EMF Carbon Panels",
-                        "image_url": "https://m.media-amazon.com/images/I/71FOZHRs61L._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-steam-sauna-tent-for-home-3l-infrared-sauna-for-indo-b0flxpg7wl"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Steam Sauna at Home, 9 Levels Heating, Sauna Tent for Home with Steamer and Folding Chair, Sauna for Relaxation, Detoxification, Spa",
-                        "price": "$74.99",
-                        "compare_price": "$101.24",
-                        "savings": "$26.25",
-                        "category": "steam",
-                        "badge": "BEST VALUE",
-                        "specs": "Foldable Chair Included",
-                        "image_url": "https://m.media-amazon.com/images/I/71CiEA6VL7L._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-steam-sauna-at-home-9-levels-heating-sauna-tent-for--b0fd6r6syr"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras Portable Home Steam Infrared Sauna Box, 660nm Red Light Therapy",
-                        "price": "$119.99",
-                        "compare_price": "$161.99",
-                        "savings": "$42.00",
-                        "category": "infrared",
-                        "badge": "POPULAR",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/71kN8QBGuZL._AC_SL1500_.jpg",
-                        "handle": "sauneras-portable-home-steam-infrared-sauna-box-660nm-red-light-therap-b0dpkscbd3"
-                }
-        },
-        {
-                "type": "product_item",
-                "settings": {
-                        "title": "Sauneras 2 Person Infrared Sauna Box for Home, Portable Steam Sauna Room with 660nm\uff06850nm Red Light Therapy Lamp, 5-Layer Waterproof, 2 Steamers, 2 Folding Chair",
-                        "price": "$199.99",
-                        "compare_price": "$269.99",
-                        "savings": "$70.00",
-                        "category": "infrared",
-                        "badge": "COUPLES PICK",
-                        "specs": "660nm/850nm Red Light",
-                        "image_url": "https://m.media-amazon.com/images/I/81hGtyyUXEL._AC_SL1500_.jpg",
-                        "handle": "sauneras-2-person-infrared-sauna-box-for-home-portable-steam-sauna-roo-b0gt7q3cfk"
-                }
-        }
-]
+      "name": "Sauneras All Products"
     }
   ]
 }
