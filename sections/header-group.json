@@ -20,7 +20,7 @@
             "text": "🔥 LIMITED TIME: Free Shipping + Free Herbal Infusion Pod with every Sauneras Box",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
-            "link": "/collections/all"
+            "link": "shopify://collections/all"
           }
         },
         "announcement-2": {
@@ -29,7 +29,7 @@
             "text": "🌿 Try Sauneras In Your Home For 30 Days Risk-Free • 100% Satisfaction Guaranteed",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
-            "link": "/collections/all"
+            "link": "shopify://collections/all"
           }
         }
       },
@@ -52,8 +52,8 @@
         "enable_language_selector": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 14,
-        "padding_bottom": 14
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     }
   },

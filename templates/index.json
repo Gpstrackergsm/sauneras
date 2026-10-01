@@ -7,9 +7,9 @@
         "heading": "Your Personal [highlight]Thermal Sanctuary[/highlight] Anytime, Anywhere",
         "subheading": "Experience medical-grade steam and deep penetrating infrared heat right at home. Flush toxins, soothe stiff joints, burn calories, and sleep deeper in just 20 minutes a day.",
         "primary_button_label": "Shop Portable Saunas",
-        "primary_button_link": "/collections/all",
+        "primary_button_link": "shopify://collections/all",
         "secondary_button_label": "See How It Works",
-        "secondary_button_link": "#how-it-works",
+        "secondary_button_link": "",
         "color_scheme": "scheme-4"
       }
     },
@@ -115,7 +115,7 @@
         "heading": "Your Home Spa in 3 Simple Steps",
         "description": "Designed for apartments, homes, patios, and bedrooms. No plumbing or expensive remodeling required.",
         "button_label": "Shop Sauneras Systems",
-        "button_link": "/collections/all",
+        "button_link": "shopify://collections/all",
         "color_scheme": "scheme-2"
       }
     },
@@ -177,7 +177,7 @@
         "heading": "Try Sauneras Risk-Free In Your Home For 30 Days",
         "text": "Take 30 days to sweat, relax, and detox in the privacy of your home. If you don't feel noticeably lighter, sleep more deeply, and recover faster, return it for a 100% refund. We cover the risk so you don't have to.",
         "button_label": "Claim Your 30-Day Trial",
-        "button_link": "/collections/all",
+        "button_link": "shopify://collections/all",
         "color_scheme": "scheme-1"
       }
     },

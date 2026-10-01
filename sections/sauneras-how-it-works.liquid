@@ -35,7 +35,7 @@
     </div>
 
     <div style="text-align: center; margin-top: 40px;">
-      <a href="{{ section.settings.button_link }}" class="sauneras-btn-primary">
+      <a href="{{ section.settings.button_link | default: routes.all_products_collection_url }}" class="sauneras-btn-primary">
         {{ section.settings.button_label }}
       </a>
     </div>
@@ -75,8 +75,7 @@
     {
       "type": "url",
       "id": "button_link",
-      "label": "Button Link",
-      "default": "/collections/all"
+      "label": "Button Link"
     },
     {
       "type": "color_scheme",
