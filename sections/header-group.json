@@ -17,7 +17,7 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "🔥 LIMITED TIME: Free Shipping + Free Herbal Infusion Pod with every Sauneras Box",
+            "text": "🇺🇸 WE SELL & SHIP EXCLUSIVELY TO THE UNITED STATES • Free Fast US Delivery",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
             "link": "shopify://collections/all"
@@ -26,7 +26,7 @@
         "announcement-2": {
           "type": "announcement",
           "settings": {
-            "text": "🌿 Try Sauneras In Your Home For 30 Days Risk-Free • 100% Satisfaction Guaranteed",
+            "text": "🔥 FREE US EXPRESS SHIPPING • Ships in 24h from US Warehouse • 30-Day Risk-Free Trial",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
             "link": "shopify://collections/all"

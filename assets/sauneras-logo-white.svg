@@ -1,16 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" fill="none">
-  <!-- Sauna Steam Waves Icon (White / Amber) -->
-  <g transform="translate(10, 8)">
-    <path d="M4 36C12 40 28 40 36 36" stroke="#E3895A" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M12 28C10 23 15 20 13 14C11 8 16 5 14 0" stroke="#E3895A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M20 30C18 24 23 19 21 12C19 6 23 3 21 -2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M28 28C26 23 31 20 29 14C27 8 32 5 30 0" stroke="#E3895A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="21" cy="-6" r="2" fill="#E3895A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <!-- Sauna box icon -->
+  <g transform="translate(4, 8)">
+    <!-- Box body -->
+    <rect x="8" y="28" width="48" height="36" rx="3" fill="#FAF7F2"/>
+    <!-- Wood slats -->
+    <line x1="8" y1="37" x2="56" y2="37" stroke="#d4cfc8" stroke-width="1.5"/>
+    <line x1="8" y1="46" x2="56" y2="46" stroke="#d4cfc8" stroke-width="1.5"/>
+    <line x1="8" y1="55" x2="56" y2="55" stroke="#d4cfc8" stroke-width="1.5"/>
+    <!-- Door handle -->
+    <rect x="36" y="42" width="6" height="10" rx="2" fill="#CF6E3C"/>
+    <!-- Steam wisps -->
+    <path d="M18 24 Q15 18 18 12 Q21 6 18 0" stroke="#CF6E3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M28 22 Q25 16 28 10 Q31 4 28 -2" stroke="#CF6E3C" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M38 24 Q35 18 38 12 Q41 6 38 0" stroke="#CF6E3C" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
   </g>
-
-  <!-- Typography: SAUNERAS -->
-  <text x="65" y="38" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" letter-spacing="3" fill="#FFFFFF">SAUNERAS</text>
-  
-  <!-- Subtitle -->
-  <text x="67" y="50" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="600" letter-spacing="2.2" fill="#B3C0BA">PORTABLE HOME SPA</text>
+  <!-- Wordmark -->
+  <text x="76" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" fill="#FAF7F2" letter-spacing="2">SAUNERAS</text>
 </svg>
