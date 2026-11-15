@@ -17,7 +17,7 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "🇫🇮 MYYMME JA TOIMITAMME AINOASTAAN SUOMEEN • Ilmainen & seurattu toimitus kotiovelle",
+            "text": "🖤 BLACK FRIDAY -TARJOUS: Säästä 400 € (Norm. 999 € → Nyt 599 €) • Alennus voimassa vain Black Fridayn ajan!",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
             "link": ""
@@ -26,7 +26,7 @@
         "announcement-2": {
           "type": "announcement",
           "settings": {
-            "text": "🔥 KAMPANJA VOIMASSA • Säästä jopa 35 % tänään • 30 päivän riskitön kotikokeilu",
+            "text": "🇫🇮 MYYMME JA TOIMITAMME AINOASTAAN SUOMEEN • Ilmainen toimitus & 30 päivän riskitön kotikokeilu",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
             "link": ""

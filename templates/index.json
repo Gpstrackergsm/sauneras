@@ -3,10 +3,10 @@
     "sauneras_hero": {
       "type": "sauneras-hero",
       "settings": {
-        "badge_text": "🇫🇮 VAIN SUOMEN ASIAKKAILLE • ILMAINEN TOIMITUS",
+        "badge_text": "🖤 BLACK FRIDAY SUOMI • SÄÄSTÄ 400 € (999 € → 599 €)",
         "heading": "Oma henkilökohtainen [highlight]lämpökeidas[/highlight] suoraan kotiisi",
-        "subheading": "Nauti syvärentouttavasta lämmöstä, tehokkaasta lihaspalautumisesta ja puhtaasta hikoilusta omassa kodissasi vain 20 minuutissa päivässä. Ei remonttia – valmis käyttöön 60 sekunnissa.",
-        "primary_button_label": "Tilaa omasi nyt",
+        "subheading": "Hyödynnä vuoden suurin Black Friday -tarjous (-400 €)! Nauti syvärentouttavasta lämmöstä, tehokkaasta lihaspalautumisesta ja puhtaasta hikoilusta omassa kodissasi vain 20 minuutissa päivässä. Alennus voimassa vain Black Fridayn ajan.",
+        "primary_button_label": "Hyödynnä Black Friday -etu (-400 €)",
         "primary_button_link": "",
         "secondary_button_label": "Katso miten se toimii",
         "secondary_button_link": "",
@@ -16,9 +16,9 @@
     "sauneras_single_product": {
       "type": "sauneras-single-product",
       "settings": {
-        "sub_heading": "VIRALLINEN SUOMI-MALLI 🇫🇮",
-        "heading": "Tilaa Sauneras™ Kotisauna Suoraan Kotiovellesi",
-        "description": "Täydellinen kotikylpyläpaketti suomalaisiin koteihin ja kerrostaloasuntoihin. Sisältää kaiken tarvittavan, ilmaisen toimituksen Suomeen sekä 30 päivän riskittömän kokeilujakson.",
+        "sub_heading": "🖤 VIRALLINEN BLACK FRIDAY -TARJOUS (-40 %)",
+        "heading": "Tilaa Sauneras™ Kotisauna Black Friday -hintaan",
+        "description": "Tämä 400 € alennus (norm. 999,00 € → nyt 599,00 €) on voimassa ainoastaan Black Friday -kampanjan ajan Suomen asiakkaille. Sisältää ilmaisen toimituksen sekä 30 päivän riskittömän kokeilujakson.",
         "color_scheme": "scheme-1"
       }
     },

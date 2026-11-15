@@ -10,7 +10,8 @@
   <div class="sauneras-container">
     <div class="sauneras-header-center" style="margin-bottom: 28px;">
       {%- if section.settings.sub_heading != blank -%}
-        <div class="sauneras-badge sauneras-badge-green">
+        <div class="sauneras-badge" style="background: #121212; color: #F79A63; border: 1px solid rgba(247, 154, 99, 0.4);">
+          <span class="pulse-dot"></span>
           {{ section.settings.sub_heading }}
         </div>
       {%- endif -%}
@@ -18,11 +19,11 @@
       <p class="sauneras-section-desc">{{ section.settings.description }}</p>
     </div>
 
-    <!-- Finland-Only Urgency & Trust Banner -->
-    <div class="sauneras-urgency-banner">
+    <!-- Black Friday + Finland-Only Urgency Banner -->
+    <div class="sauneras-urgency-banner" style="background: linear-gradient(135deg, #141B18 0%, #1F362B 100%); color: #FFFFFF; border-color: #CF6E3C;">
       <div class="sauneras-urgency-pill">
         <span class="sauneras-pulse-dot"></span>
-        <span><strong>SUOMI-KAMPANJA:</strong> Säästä jopa 35 % tänään</span>
+        <span><strong>🖤 VAIN BLACK FRIDAYN AJAN:</strong> Säästä 400 € (999 € → 599 €)</span>
       </div>
       <div class="sauneras-urgency-pill">
         <span>🇫🇮 <strong>Toimitus vain Suomeen:</strong> Ilmainen & seurattu kuljetus</span>
@@ -36,13 +37,13 @@
       <!-- Left Column: Product Media Gallery -->
       <div class="sauneras-sp-gallery">
         <div class="sauneras-sp-main-media">
-          <span class="sauneras-card-badge">🇫🇮 SUOMEN SUOSIKKI</span>
+          <span class="sauneras-card-badge" style="background: #121212; color: #F79A63; border: 1px solid #CF6E3C;">🖤 BLACK FRIDAY -40 %</span>
           {%- if product != blank and product.compare_at_price > product.price -%}
             <span class="sauneras-card-specs">
               SÄÄSTÄ {{ product.compare_at_price | minus: product.price | money }}
             </span>
           {%- else -%}
-            <span class="sauneras-card-specs">65 °C Lämpö • 230V</span>
+            <span class="sauneras-card-specs">SÄÄSTÄ 400 € • VAIN NYT</span>
           {%- endif -%}
 
           {%- if product != blank and product.featured_media != blank -%}
@@ -92,17 +93,17 @@
         <!-- Finland Exclusive Guarantees Under Image -->
         <div class="sauneras-sp-gallery-badges">
           <div class="sauneras-sp-mini-badge">
+            <span>🖤</span>
+            <div>
+              <strong>Black Friday -erikoishinta</strong>
+              <span>400 € alennus voimassa vain Black Fridayn ajan</span>
+            </div>
+          </div>
+          <div class="sauneras-sp-mini-badge">
             <span>🇫🇮</span>
             <div>
               <strong>Vain Suomen markkinoille</strong>
               <span>Myymme ja toimitamme ainoastaan Suomeen</span>
-            </div>
-          </div>
-          <div class="sauneras-sp-mini-badge">
-            <span>🔌</span>
-            <div>
-              <strong>230V Suomalainen pistoke</strong>
-              <span>CE-hyväksytty • Heti käyttövalmis</span>
             </div>
           </div>
           <div class="sauneras-sp-mini-badge">
@@ -126,7 +127,7 @@
       <div class="sauneras-sp-details">
         <div class="sauneras-card-stock-notice" style="font-size: 0.85rem; margin-bottom: 10px;">
           <span class="sauneras-stock-indicator"></span>
-          <span>Varastossa • Lähetetään 24 tunnin sisällä (Vain Suomi 🇫🇮)</span>
+          <span>Black Friday -erä varastossa • Lähetetään 24h sisällä (Vain Suomi 🇫🇮)</span>
         </div>
 
         <div class="sauneras-card-rating" style="margin-bottom: 12px;">
@@ -142,13 +143,17 @@
           {%- endif -%}
         </h1>
 
-        <div class="sauneras-sp-pricing-box">
-          <div class="sauneras-pricing-row" style="margin-bottom: 4px;">
+        <div class="sauneras-sp-pricing-box" style="border: 2px solid #CF6E3C; position: relative;">
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: #121212; color: #F79A63; font-size: 0.76rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; margin-bottom: 10px; letter-spacing: 0.04em; text-transform: uppercase;">
+            🖤 Vain Black Friday -alennus • Rajoitettu erä
+          </div>
+
+          <div class="sauneras-pricing-row" style="margin-bottom: 6px;">
             <span class="sauneras-sp-price-current" id="saunerasSpPrice">
               {%- if product != blank -%}
                 {{ current_variant.price | money }}
               {%- else -%}
-                159,99 €
+                599,00 €
               {%- endif -%}
             </span>
 
@@ -156,22 +161,24 @@
               <span class="sauneras-sp-price-compare" id="saunerasSpCompare">
                 {{ current_variant.compare_at_price | money }}
               </span>
-              <span class="sauneras-savings-tag">
-                SÄÄSTÄ {{ current_variant.compare_at_price | minus: current_variant.price | money }}
+              <span class="sauneras-savings-tag" style="background: #CF6E3C; color: #FFFFFF;">
+                BLACK FRIDAY: SÄÄSTÄ {{ current_variant.compare_at_price | minus: current_variant.price | money }}
               </span>
-            {%- elsif product == blank -%}
-              <span class="sauneras-sp-price-compare">219,00 €</span>
-              <span class="sauneras-savings-tag">SÄÄSTÄ 59,01 €</span>
+            {%- else -%}
+              <span class="sauneras-sp-price-compare">999,00 €</span>
+              <span class="sauneras-savings-tag" style="background: #CF6E3C; color: #FFFFFF;">
+                BLACK FRIDAY: SÄÄSTÄ 400,00 € (-40 %)
+              </span>
             {%- endif -%}
           </div>
           <div class="sauneras-sp-tax-note">
-            Sisältää ALV:n • 🇫🇮 Ilmainen toimitus kaikkialle Suomeen
+            ⏳ <strong>Huom:</strong> Tämä erikoishinta on voimassa <u>vain Black Fridayn ajan</u> (norm. 999,00 €). Sis. ALV & ilmaisen toimituksen Suomeen 🇫🇮
           </div>
         </div>
 
         <!-- Key Highlights Checklist -->
         <div class="sauneras-sp-features-box">
-          <div class="sauneras-sp-features-title">Mitä täydelliseen kotisaunapakettiin sisältyy:</div>
+          <div class="sauneras-sp-features-title">Mitä täydelliseen Black Friday -pakettiin sisältyy:</div>
           <div class="sauneras-feature-point">✓ <strong>Monikerroksinen lämpöeristetty saunateltta</strong> — pitää lämmön tehokkaasti sisällä</div>
           <div class="sauneras-feature-point">✓ <strong>Tehokas lämmitin & älykäs kaukosäädin</strong> — säädettävä lämpötila jopa 65 °C asti ja 99 min ajastin</div>
           <div class="sauneras-feature-point">✓ <strong>Taitettava saunatuoli & imukykyinen lattiamatto</strong> — sisältyvät pakkaukseen veloituksetta</div>
@@ -225,7 +232,7 @@
                   <circle cx="20" cy="21" r="1"></circle>
                   <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                 </svg>
-                <span>Tilaa nyt — Ilmainen toimitus Suomeen 🇫🇮</span>
+                <span>Tilaa Black Friday -hintaan — Ilmainen toimitus 🇫🇮</span>
               </a>
 
               <a href="{{ product.url }}" class="sauneras-btn-details-link" style="margin-top: 6px;">
@@ -233,7 +240,7 @@
               </a>
             {%- else -%}
               <a href="/collections/all" class="sauneras-btn-instant-cart sauneras-sp-buy-btn" style="text-decoration: none;">
-                <span>Tilaa nyt — Ilmainen toimitus Suomeen 🇫🇮</span>
+                <span>Tilaa Black Friday -hintaan — Ilmainen toimitus 🇫🇮</span>
               </a>
             {%- endif -%}
           </div>
@@ -243,7 +250,7 @@
         <div class="sauneras-sp-finland-box">
           <div class="sauneras-sp-finland-row">
             <span>🇫🇮</span>
-            <span><strong>Huomio:</strong> Myymme ja toimitamme ainoastaan Manner-Suomeen. Kaikki tilaukset lähetetään seurannalla ilman toimituskuluja.</span>
+            <span><strong>Huomio:</strong> Myymme ja toimitamme ainoastaan Manner-Suomeen. Black Friday -alennus (-400 €) on voimassa vain kampanjan ajan.</span>
           </div>
           <div class="sauneras-sp-payments">
             🔒 Turvallinen 256-bit SSL-maksu: Korttimaksut • Apple Pay • Google Pay • Shop Pay
@@ -371,19 +378,19 @@
       "type": "text",
       "id": "sub_heading",
       "label": "Small Subtitle",
-      "default": "VIRALLINEN SUOMI-MALLI"
+      "default": "🖤 VIRALLINEN BLACK FRIDAY -TARJOUS (-40 %)"
     },
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Tilaa Sauneras™ Kotisauna Suoraan Kotiovellesi"
+      "default": "Tilaa Sauneras™ Kotisauna Black Friday -hintaan"
     },
     {
       "type": "textarea",
       "id": "description",
       "label": "Description",
-      "default": "Täydellinen kotikylpyläpaketti suomalaisiin koteihin. Sisältää kaiken tarvittavan, ilmaisen toimituksen Suomeen sekä 30 päivän riskittömän kokeilujakson."
+      "default": "Tämä 400 € alennus (999 € → 599 €) on voimassa ainoastaan Black Friday -kampanjan ajan. Sisältää ilmaisen toimituksen Suomeen sekä 30 päivän riskittömän kokeilujakson."
     },
     {
       "type": "color_scheme",
