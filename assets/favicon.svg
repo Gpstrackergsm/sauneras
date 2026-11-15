@@ -1,15 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Background circle -->
-  <circle cx="32" cy="32" r="30" fill="#1F362B"/>
-  <!-- Sauna box body -->
-  <rect x="12" y="32" width="40" height="26" rx="3" fill="#FAF7F2"/>
-  <!-- Wood slats -->
-  <line x1="12" y1="40" x2="52" y2="40" stroke="#c8c3bb" stroke-width="1.5"/>
-  <line x1="12" y1="48" x2="52" y2="48" stroke="#c8c3bb" stroke-width="1.5"/>
-  <!-- Door handle -->
-  <rect x="34" y="43" width="6" height="9" rx="2" fill="#CF6E3C"/>
-  <!-- Steam wisps -->
-  <path d="M22 28 Q19 22 22 16 Q25 10 22 4" stroke="#CF6E3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <path d="M32 26 Q29 20 32 14 Q35 8 32 2" stroke="#CF6E3C" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.85"/>
-  <path d="M42 28 Q39 22 42 16 Q45 10 42 4" stroke="#CF6E3C" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="saunerasBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#264335"/>
+      <stop offset="100%" stop-color="#14241C"/>
+    </linearGradient>
+    <linearGradient id="saunerasSteam" x1="32" y1="10" x2="32" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F79A63"/>
+      <stop offset="100%" stop-color="#CF6E3C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded App-Style Badge -->
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#saunerasBg)" stroke="#355B48" stroke-width="1.5"/>
+
+  <!-- Sleek Nordic Sauna Roof / Sanctuary Frame -->
+  <path d="M13 30L32 15L51 30" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Rising Thermal Steam Waves (High Contrast at 16px & 32px) -->
+  <path d="M22 46C19.5 41 24.5 37 22 32C19.5 27 24 24 22 21" stroke="url(#saunerasSteam)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M32 48C29.5 42 34.5 37 32 31C29.5 25 34 21 32 17" stroke="#FFFFFF" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M42 46C39.5 41 44.5 37 42 32C39.5 27 44 24 42 21" stroke="url(#saunerasSteam)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Warm Cedar Base Line -->
+  <path d="M16 52H48" stroke="#CF6E3C" stroke-width="3.5" stroke-linecap="round"/>
 </svg>

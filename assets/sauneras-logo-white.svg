@@ -1,19 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
-  <!-- Sauna box icon -->
-  <g transform="translate(4, 8)">
-    <!-- Box body -->
-    <rect x="8" y="28" width="48" height="36" rx="3" fill="#FAF7F2"/>
-    <!-- Wood slats -->
-    <line x1="8" y1="37" x2="56" y2="37" stroke="#d4cfc8" stroke-width="1.5"/>
-    <line x1="8" y1="46" x2="56" y2="46" stroke="#d4cfc8" stroke-width="1.5"/>
-    <line x1="8" y1="55" x2="56" y2="55" stroke="#d4cfc8" stroke-width="1.5"/>
-    <!-- Door handle -->
-    <rect x="36" y="42" width="6" height="10" rx="2" fill="#CF6E3C"/>
-    <!-- Steam wisps -->
-    <path d="M18 24 Q15 18 18 12 Q21 6 18 0" stroke="#CF6E3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M28 22 Q25 16 28 10 Q31 4 28 -2" stroke="#CF6E3C" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
-    <path d="M38 24 Q35 18 38 12 Q41 6 38 0" stroke="#CF6E3C" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" width="320" height="72" fill="none">
+  <!-- Nordic Sauna Emblem Badge (Light for Dark Backgrounds) -->
+  <rect x="4" y="6" width="60" height="60" rx="14" fill="#284437" stroke="#3E6553" stroke-width="1.5"/>
+  <path d="M15 32L34 17L53 32" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 48C21.5 43 26.5 39 24 34C21.5 29 26 26 24 23" stroke="#F79A63" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M34 50C31.5 44 36.5 39 34 33C31.5 27 36 23 34 19" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M44 48C41.5 43 46.5 39 44 34C41.5 29 46 26 44 23" stroke="#F79A63" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M18 54H50" stroke="#F79A63" stroke-width="3.2" stroke-linecap="round"/>
+
   <!-- Wordmark -->
-  <text x="76" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" fill="#FAF7F2" letter-spacing="2">SAUNERAS</text>
+  <text x="80" y="42" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" letter-spacing="3" fill="#FFFFFF">SAUNERAS</text>
+  <text x="82" y="56" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="700" letter-spacing="2.4" fill="#F79A63">KOTISAUNA • SUOMI</text>
 </svg>
