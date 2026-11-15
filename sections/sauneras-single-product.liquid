@@ -1,0 +1,401 @@
+{%- liquid
+  assign product = all_products[section.settings.product]
+  if product == blank
+    assign product = collections['all'].products.first
+  endif
+  assign current_variant = product.selected_or_first_available_variant
+-%}
+
+<section class="sauneras-section color-{{ section.settings.color_scheme }}" id="single-product">
+  <div class="sauneras-container">
+    <div class="sauneras-header-center" style="margin-bottom: 28px;">
+      {%- if section.settings.sub_heading != blank -%}
+        <div class="sauneras-badge sauneras-badge-green">
+          {{ section.settings.sub_heading }}
+        </div>
+      {%- endif -%}
+      <h2 class="sauneras-section-title">{{ section.settings.heading }}</h2>
+      <p class="sauneras-section-desc">{{ section.settings.description }}</p>
+    </div>
+
+    <!-- Finland-Only Urgency & Trust Banner -->
+    <div class="sauneras-urgency-banner">
+      <div class="sauneras-urgency-pill">
+        <span class="sauneras-pulse-dot"></span>
+        <span><strong>SUOMI-KAMPANJA:</strong> Säästä jopa 35 % tänään</span>
+      </div>
+      <div class="sauneras-urgency-pill">
+        <span>🇫🇮 <strong>Toimitus vain Suomeen:</strong> Ilmainen & seurattu kuljetus</span>
+      </div>
+      <div class="sauneras-urgency-pill">
+        <span>🛡️ <strong>30 päivän kotikokeilu:</strong> 100 % rahat takaisin -takuu</span>
+      </div>
+    </div>
+
+    <div class="sauneras-single-product-grid">
+      <!-- Left Column: Product Media Gallery -->
+      <div class="sauneras-sp-gallery">
+        <div class="sauneras-sp-main-media">
+          <span class="sauneras-card-badge">🇫🇮 SUOMEN SUOSIKKI</span>
+          {%- if product != blank and product.compare_at_price > product.price -%}
+            <span class="sauneras-card-specs">
+              SÄÄSTÄ {{ product.compare_at_price | minus: product.price | money }}
+            </span>
+          {%- else -%}
+            <span class="sauneras-card-specs">65 °C Lämpö • 230V</span>
+          {%- endif -%}
+
+          {%- if product != blank and product.featured_media != blank -%}
+            <img
+              id="saunerasMainProductImg"
+              src="{{ product.featured_media | image_url: width: 1200 }}"
+              alt="{{ product.title | escape }}"
+              width="1000"
+              height="1000"
+              loading="eager"
+              class="sauneras-sp-main-img"
+            >
+          {%- else -%}
+            <img
+              id="saunerasMainProductImg"
+              src="https://m.media-amazon.com/images/I/71wAOO+FF1L._AC_SL1500_.jpg"
+              alt="Sauneras Kotisauna"
+              width="1000"
+              height="1000"
+              loading="eager"
+              class="sauneras-sp-main-img"
+            >
+          {%- endif -%}
+        </div>
+
+        {%- if product != blank and product.media.size > 1 -%}
+          <div class="sauneras-sp-thumbs">
+            {%- for media in product.media limit: 6 -%}
+              <button
+                type="button"
+                class="sauneras-sp-thumb-btn {% if forloop.first %}active{% endif %}"
+                data-img-src="{{ media | image_url: width: 1200 }}"
+                aria-label="Katso kuva {{ forloop.index }}"
+              >
+                <img
+                  src="{{ media | image_url: width: 240 }}"
+                  alt="{{ product.title | escape }} - kuva {{ forloop.index }}"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                >
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        <!-- Finland Exclusive Guarantees Under Image -->
+        <div class="sauneras-sp-gallery-badges">
+          <div class="sauneras-sp-mini-badge">
+            <span>🇫🇮</span>
+            <div>
+              <strong>Vain Suomen markkinoille</strong>
+              <span>Myymme ja toimitamme ainoastaan Suomeen</span>
+            </div>
+          </div>
+          <div class="sauneras-sp-mini-badge">
+            <span>🔌</span>
+            <div>
+              <strong>230V Suomalainen pistoke</strong>
+              <span>CE-hyväksytty • Heti käyttövalmis</span>
+            </div>
+          </div>
+          <div class="sauneras-sp-mini-badge">
+            <span>🚚</span>
+            <div>
+              <strong>Ilmainen toimitus (0 €)</strong>
+              <span>Seurattu toimitus kotiovelle tai noutopisteeseen</span>
+            </div>
+          </div>
+          <div class="sauneras-sp-mini-badge">
+            <span>🛡️</span>
+            <div>
+              <strong>30 päivän palautusoikeus</strong>
+              <span>Kokeile rauhassa kotona 30 päivän ajan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Single Product Buy Box -->
+      <div class="sauneras-sp-details">
+        <div class="sauneras-card-stock-notice" style="font-size: 0.85rem; margin-bottom: 10px;">
+          <span class="sauneras-stock-indicator"></span>
+          <span>Varastossa • Lähetetään 24 tunnin sisällä (Vain Suomi 🇫🇮)</span>
+        </div>
+
+        <div class="sauneras-card-rating" style="margin-bottom: 12px;">
+          <span class="stars" style="color: #CF6E3C; font-size: 1.05rem;">★★★★★</span>
+          <span class="reviews-count" style="font-weight: 600; color: #4A5B53;">4.9/5.0 (Vahvistetut suomalaiset asiakkaat)</span>
+        </div>
+
+        <h1 class="sauneras-sp-title">
+          {%- if product != blank -%}
+            {{ product.title }}
+          {%- else -%}
+            Sauneras™ Kannettava Infrapuna- & Höyrysauna Kotiin (Suomi-malli)
+          {%- endif -%}
+        </h1>
+
+        <div class="sauneras-sp-pricing-box">
+          <div class="sauneras-pricing-row" style="margin-bottom: 4px;">
+            <span class="sauneras-sp-price-current" id="saunerasSpPrice">
+              {%- if product != blank -%}
+                {{ current_variant.price | money }}
+              {%- else -%}
+                159,99 €
+              {%- endif -%}
+            </span>
+
+            {%- if product != blank and current_variant.compare_at_price > current_variant.price -%}
+              <span class="sauneras-sp-price-compare" id="saunerasSpCompare">
+                {{ current_variant.compare_at_price | money }}
+              </span>
+              <span class="sauneras-savings-tag">
+                SÄÄSTÄ {{ current_variant.compare_at_price | minus: current_variant.price | money }}
+              </span>
+            {%- elsif product == blank -%}
+              <span class="sauneras-sp-price-compare">219,00 €</span>
+              <span class="sauneras-savings-tag">SÄÄSTÄ 59,01 €</span>
+            {%- endif -%}
+          </div>
+          <div class="sauneras-sp-tax-note">
+            Sisältää ALV:n • 🇫🇮 Ilmainen toimitus kaikkialle Suomeen
+          </div>
+        </div>
+
+        <!-- Key Highlights Checklist -->
+        <div class="sauneras-sp-features-box">
+          <div class="sauneras-sp-features-title">Mitä täydelliseen kotisaunapakettiin sisältyy:</div>
+          <div class="sauneras-feature-point">✓ <strong>Monikerroksinen lämpöeristetty saunateltta</strong> — pitää lämmön tehokkaasti sisällä</div>
+          <div class="sauneras-feature-point">✓ <strong>Tehokas lämmitin & älykäs kaukosäädin</strong> — säädettävä lämpötila jopa 65 °C asti ja 99 min ajastin</div>
+          <div class="sauneras-feature-point">✓ <strong>Taitettava saunatuoli & imukykyinen lattiamatto</strong> — sisältyvät pakkaukseen veloituksetta</div>
+          <div class="sauneras-feature-point">✓ <strong>Valmis 60 sekunnissa</strong> — ei remonttia, ei putkitöitä, toimii tavallisella 230V pistorasialla</div>
+          <div class="sauneras-feature-point">✓ <strong>30 päivän tyytyväisyystakuu & 1 vuoden takuu</strong> — täysin riskitön tilaus</div>
+        </div>
+
+        {%- if product != blank -%}
+          {%- unless product.has_only_default_variant -%}
+            <div class="sauneras-sp-variants">
+              <label for="saunerasVariantSelect" class="sauneras-sp-label">Valitse malli / vaihtoehto:</label>
+              <select id="saunerasVariantSelect" class="sauneras-sp-select">
+                {%- for variant in product.variants -%}
+                  <option
+                    value="{{ variant.id }}"
+                    data-price="{{ variant.price | money }}"
+                    data-compare="{{ variant.compare_at_price | money }}"
+                    {% if variant == current_variant %}selected="selected"{% endif %}
+                    {% unless variant.available %}disabled="disabled"{% endunless %}
+                  >
+                    {{ variant.title }} — {{ variant.price | money }}{% unless variant.available %} (Loppuunmyyty){% endunless %}
+                  </option>
+                {%- endfor -%}
+              </select>
+            </div>
+          {%- endunless -%}
+        {%- endif -%}
+
+        <!-- Quantity & Direct Checkout Actions -->
+        <div class="sauneras-sp-purchase-controls">
+          <div class="sauneras-sp-qty-wrap">
+            <label for="saunerasQtyInput" class="sauneras-sp-label">Määrä:</label>
+            <div class="sauneras-sp-qty-box">
+              <button type="button" class="sauneras-qty-btn" id="saunerasQtyMinus" aria-label="Vähennä määrää">−</button>
+              <input type="number" id="saunerasQtyInput" value="1" min="1" max="10" readonly>
+              <button type="button" class="sauneras-qty-btn" id="saunerasQtyPlus" aria-label="Lisää määrää">+</button>
+            </div>
+          </div>
+
+          <div class="sauneras-sp-cta-stack">
+            {%- if product != blank -%}
+              <a
+                href="/cart/{{ current_variant.id }}:1"
+                id="saunerasDirectCheckoutBtn"
+                data-base-variant="{{ current_variant.id }}"
+                class="sauneras-btn-instant-cart sauneras-sp-buy-btn"
+                style="text-decoration: none;"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span>Tilaa nyt — Ilmainen toimitus Suomeen 🇫🇮</span>
+              </a>
+
+              <a href="{{ product.url }}" class="sauneras-btn-details-link" style="margin-top: 6px;">
+                <span>Katso täydet tuotetiedot & lisäkuvat →</span>
+              </a>
+            {%- else -%}
+              <a href="/collections/all" class="sauneras-btn-instant-cart sauneras-sp-buy-btn" style="text-decoration: none;">
+                <span>Tilaa nyt — Ilmainen toimitus Suomeen 🇫🇮</span>
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <!-- Finland Shipping & Payment Notice -->
+        <div class="sauneras-sp-finland-box">
+          <div class="sauneras-sp-finland-row">
+            <span>🇫🇮</span>
+            <span><strong>Huomio:</strong> Myymme ja toimitamme ainoastaan Manner-Suomeen. Kaikki tilaukset lähetetään seurannalla ilman toimituskuluja.</span>
+          </div>
+          <div class="sauneras-sp-payments">
+            🔒 Turvallinen 256-bit SSL-maksu: Korttimaksut • Apple Pay • Google Pay • Shop Pay
+          </div>
+        </div>
+
+        <!-- Collapsible Product Description & Specs -->
+        <div class="sauneras-sp-accordions">
+          <div class="sauneras-faq-item">
+            <button
+              type="button"
+              class="sauneras-faq-btn"
+              onclick="const c = this.nextElementSibling; const open = c.style.display === 'block'; c.style.display = open ? 'none' : 'block'; this.querySelector('.faq-toggle').innerText = open ? '+' : '−';"
+            >
+              <span>📋 Tuotekuvaus & Ominaisuudet</span>
+              <span class="faq-toggle" style="font-size: 1.3rem; color: #CF6E3C;">−</span>
+            </button>
+            <div class="sauneras-faq-content" style="display: block;">
+              {%- if product != blank and product.description != blank -%}
+                <div class="sauneras-sp-desc-rte">
+                  {{ product.description }}
+                </div>
+              {%- else -%}
+                <p>Sauneras™ tuo aidon ja rentouttavan lämpöelämyksen suoraan kotiisi, olohuoneeseen, kylpyhuoneeseen tai parvekkeelle. Tehokas lämpöteknologia syväpuhdistaa kehoa, lievittää lihasjännitystä ja parantaa unenlaatua vain 20 minuutissa päivässä.</p>
+              {%- endif -%}
+            </div>
+          </div>
+
+          <div class="sauneras-faq-item">
+            <button
+              type="button"
+              class="sauneras-faq-btn"
+              onclick="const c = this.nextElementSibling; const open = c.style.display === 'block'; c.style.display = open ? 'none' : 'block'; this.querySelector('.faq-toggle').innerText = open ? '+' : '−';"
+            >
+              <span>🇫🇮 Toimitus & Takuu Suomessa</span>
+              <span class="faq-toggle" style="font-size: 1.3rem; color: #CF6E3C;">+</span>
+            </button>
+            <div class="sauneras-faq-content" style="display: none;">
+              <p><strong>Toimitusalue:</strong> Toimitamme tilauksia ainoastaan Suomeen. Jokainen tilaus sisältää ilmaisen ja seuratun toimituksen.<br><br><strong>30 päivän kotikokeilu:</strong> Voit testata tuotetta rauhassa kotona 30 päivän ajan. Jos et ole täysin tyytyväinen, saat rahasi 100 % takaisin.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mainImg = document.getElementById('saunerasMainProductImg');
+    const thumbBtns = document.querySelectorAll('.sauneras-sp-thumb-btn');
+    const variantSelect = document.getElementById('saunerasVariantSelect');
+    const qtyInput = document.getElementById('saunerasQtyInput');
+    const qtyMinus = document.getElementById('saunerasQtyMinus');
+    const qtyPlus = document.getElementById('saunerasQtyPlus');
+    const checkoutBtn = document.getElementById('saunerasDirectCheckoutBtn');
+    const priceEl = document.getElementById('saunerasSpPrice');
+    const compareEl = document.getElementById('saunerasSpCompare');
+
+    thumbBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        thumbBtns.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        const newSrc = this.getAttribute('data-img-src');
+        if (mainImg && newSrc) {
+          mainImg.src = newSrc;
+        }
+      });
+    });
+
+    function updateCheckoutUrl() {
+      if (!checkoutBtn) return;
+      const variantId = variantSelect ? variantSelect.value : checkoutBtn.getAttribute('data-base-variant');
+      const qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
+      checkoutBtn.setAttribute('href', '/cart/' + variantId + ':' + qty);
+    }
+
+    if (variantSelect) {
+      variantSelect.addEventListener('change', function() {
+        const selectedOption = this.options[this.selectedIndex];
+        if (selectedOption && priceEl) {
+          const newPrice = selectedOption.getAttribute('data-price');
+          const newCompare = selectedOption.getAttribute('data-compare');
+          if (newPrice) priceEl.textContent = newPrice;
+          if (compareEl && newCompare) compareEl.textContent = newCompare;
+        }
+        updateCheckoutUrl();
+      });
+    }
+
+    if (qtyMinus && qtyInput) {
+      qtyMinus.addEventListener('click', function() {
+        const current = parseInt(qtyInput.value, 10) || 1;
+        if (current > 1) {
+          qtyInput.value = current - 1;
+          updateCheckoutUrl();
+        }
+      });
+    }
+
+    if (qtyPlus && qtyInput) {
+      qtyPlus.addEventListener('click', function() {
+        const current = parseInt(qtyInput.value, 10) || 1;
+        if (current < 10) {
+          qtyInput.value = current + 1;
+          updateCheckoutUrl();
+        }
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Sauneras Single Product",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product (Leave blank to auto-select store product)"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Small Subtitle",
+      "default": "VIRALLINEN SUOMI-MALLI"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Tilaa Sauneras™ Kotisauna Suoraan Kotiovellesi"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Täydellinen kotikylpyläpaketti suomalaisiin koteihin. Sisältää kaiken tarvittavan, ilmaisen toimituksen Suomeen sekä 30 päivän riskittömän kokeilujakson."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sauneras Single Product"
+    }
+  ]
+}
+{% endschema %}

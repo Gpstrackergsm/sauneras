@@ -3,448 +3,24 @@
     "sauneras_hero": {
       "type": "sauneras-hero",
       "settings": {
-        "badge_text": "#1 AT-HOME PORTABLE WELLNESS SPA",
-        "heading": "Your Personal [highlight]Thermal Sanctuary[/highlight] Anytime, Anywhere",
-        "subheading": "Experience medical-grade steam and deep penetrating infrared heat right at home. Flush toxins, soothe stiff joints, burn calories, and sleep deeper in just 20 minutes a day.",
-        "primary_button_label": "Shop All 28 Models",
+        "badge_text": "🇫🇮 VAIN SUOMEN ASIAKKAILLE • ILMAINEN TOIMITUS",
+        "heading": "Oma henkilökohtainen [highlight]lämpökeidas[/highlight] suoraan kotiisi",
+        "subheading": "Nauti syvärentouttavasta lämmöstä, tehokkaasta lihaspalautumisesta ja puhtaasta hikoilusta omassa kodissasi vain 20 minuutissa päivässä. Ei remonttia – valmis käyttöön 60 sekunnissa.",
+        "primary_button_label": "Tilaa omasi nyt",
         "primary_button_link": "",
-        "secondary_button_label": "How It Works",
+        "secondary_button_label": "Katso miten se toimii",
         "secondary_button_link": "",
         "color_scheme": "scheme-4"
       }
     },
-    "sauneras_all_products": {
-      "type": "sauneras-all-products",
+    "sauneras_single_product": {
+      "type": "sauneras-single-product",
       "settings": {
-        "sub_heading": "COMPLETE 2026 CATALOG",
-        "heading": "Explore All 28 Sauneras\u2122 Home Spa Models",
-        "description": "Select your ideal at-home thermal sanctuary below. All units feature medical-grade safety, fast multi-level heat control, free express delivery, and our 30-day in-home risk-free trial.",
+        "sub_heading": "VIRALLINEN SUOMI-MALLI 🇫🇮",
+        "heading": "Tilaa Sauneras™ Kotisauna Suoraan Kotiovellesi",
+        "description": "Täydellinen kotikylpyläpaketti suomalaisiin koteihin ja kerrostaloasuntoihin. Sisältää kaiken tarvittavan, ilmaisen toimituksen Suomeen sekä 30 päivän riskittömän kokeilujakson.",
         "color_scheme": "scheme-1"
-      },
-      "blocks": {
-        "product_01": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Sauna - Collapsible Personal Steam Sauna",
-            "price": "$149.99",
-            "compare_price": "$199.99",
-            "savings": "$50.00",
-            "category": "steam",
-            "badge": "BEST VALUE",
-            "specs": "Foldable Chair Included",
-            "image_url": "https://m.media-amazon.com/images/I/71h2LICSMVL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-sauna-collapsible-personal-steam-sauna-b0fxbf33cm"
-          }
-        },
-        "product_02": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Infrared Home Steam Sauna Box with 660nm 850nm Red Light Therapy",
-            "price": "$159.99",
-            "compare_price": "$215.99",
-            "savings": "$56.00",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/71wAOO+FF1L._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-infrared-home-steam-sauna-box-with-660nm-850nm-red-l-b0gt7qlgh6"
-          }
-        },
-        "product_03": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Home Sauna, Dry Heat Sauna Box with Infrared Light",
-            "price": "$199.00",
-            "compare_price": "$268.65",
-            "savings": "$69.65",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/81ba4zxBvRL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-home-sauna-dry-heat-sauna-box-with-infrared-light-b0hg7712dg"
-          }
-        },
-        "product_04": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Sauna Thermometer Fahrenheit, 2-in-1 Thermometer and Hygrometer, Precision Temperature Gauge & Thermostat for Portable Steam Sauna Box, Home Infrared Indoor Use Essential Accessory (Sliver)",
-            "price": "$6.99",
-            "compare_price": "$9.44",
-            "savings": "$2.45",
-            "category": "accessories",
-            "badge": "ESSENTIAL",
-            "specs": "Precision 2-in-1 Gauge",
-            "image_url": "https://m.media-amazon.com/images/I/61mYpCaLF1L._AC_SL1500_.jpg",
-            "handle": "sauneras-sauna-thermometer-fahrenheit-2-in-1-thermometer-and-hygromete-b0gx2cpwvv"
-          }
-        },
-        "product_05": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Steam Sauna Box, Infrared Sauna for Home, 660nm & 850nm Red Light Therapy, 99 Min Timer & 9 Temp Levels, 3L Steamer Remote Control Big Folding Chair, for Home Spa Detoxification",
-            "price": "$199.99",
-            "compare_price": "$269.99",
-            "savings": "$70.00",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/71XtLl3jvwL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-steam-sauna-box-infrared-sauna-for-home-660nm-850nm--b0fnrdrhq4"
-          }
-        },
-        "product_06": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Sauna, Steam Sauna for Relaxation, Detox and Muscle Relief, Personal Indoor Sauna Box with 3L/1500W Steamer, 9 Levels Up to 140\u00b0F Portable Sauna for Home, Bedroom, Living Room",
-            "price": "$139.99",
-            "compare_price": "$188.99",
-            "savings": "$49.00",
-            "category": "steam",
-            "badge": "BEST VALUE",
-            "specs": "High-Power Fast Steamer",
-            "image_url": "https://m.media-amazon.com/images/I/71LyfHklzLL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-sauna-steam-sauna-for-relaxation-detox-and-muscle-re-b0g1xdryp2"
-          }
-        },
-        "product_07": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Full Size Infrared Sauna for Home,Pentagonal Size Far Infrared Sauna,One Person Sauna Tent with Heating Foot Pad, Portable Chair, (L38 x W38 x H63, Grey)",
-            "price": "$165.89",
-            "compare_price": "$223.95",
-            "savings": "$58.06",
-            "category": "infrared",
-            "badge": "TOP RATED",
-            "specs": "Low-EMF Carbon Panels",
-            "image_url": "https://m.media-amazon.com/images/I/71fdZTuY+DL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-full-size-infrared-sauna-for-home-pentagonal-size-fa-b0f17mcpyx"
-          }
-        },
-        "product_08": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Infrared Sauna Box for Home, 3L 1400W Steam Sauna Tent",
-            "price": "$219.00",
-            "compare_price": "$295.65",
-            "savings": "$76.65",
-            "category": "infrared",
-            "badge": "PREMIUM",
-            "specs": "High-Power Fast Steamer",
-            "image_url": "https://m.media-amazon.com/images/I/816GSARbJPL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-infrared-sauna-box-for-home-3l-1400w-steam-sauna-ten-b0fx49ryvc"
-          }
-        },
-        "product_09": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Sauna Thermometer Fahrenheit and Hygrometer, Upgraded Lanyard-Mounted for Portable Steam Sauna Box, Ideal for Infrared/Indoor/Home Use, Essential Accessory and Gift for Enthusiasts",
-            "price": "$9.99",
-            "compare_price": "$13.49",
-            "savings": "$3.50",
-            "category": "accessories",
-            "badge": "ESSENTIAL",
-            "specs": "Precision 2-in-1 Gauge",
-            "image_url": "https://m.media-amazon.com/images/I/71gqYbZMiQL._AC_SL1500_.jpg",
-            "handle": "sauneras-sauna-thermometer-fahrenheit-and-hygrometer-upgraded-lanyard--b0fncvvhmg"
-          }
-        },
-        "product_10": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Home Infrared Sauna Box, 2-Panel Red Light Steam Sauna Tent",
-            "price": "$189.98",
-            "compare_price": "$256.47",
-            "savings": "$66.49",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/71Y4gGGXXqL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-home-infrared-sauna-box-2-panel-red-light-steam-saun-b0h1hbbbll"
-          }
-        },
-        "product_11": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Steam Sauna Tent for Home with Transparent Door, Portable Indoor Sauna with Powerful Steam Heating, Foldable Personal Spa for Relaxation (Double Rectangular, Black)",
-            "price": "$199.99",
-            "compare_price": "$269.99",
-            "savings": "$70.00",
-            "category": "steam",
-            "badge": "TOP RATED",
-            "specs": "Foldable Chair Included",
-            "image_url": "https://m.media-amazon.com/images/I/81EwD+oW5VL._AC_SL1500_.jpg",
-            "handle": "sauneras-steam-sauna-tent-for-home-with-transparent-door-portable-indo-b0fn3cn6lf"
-          }
-        },
-        "product_12": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Sauna Box Infrared Right Light Portable Sauna Tent",
-            "price": "$130.99",
-            "compare_price": "$176.84",
-            "savings": "$45.85",
-            "category": "infrared",
-            "badge": "BEST VALUE",
-            "specs": "Low-EMF Carbon Panels",
-            "image_url": "https://m.media-amazon.com/images/I/81KWoMrgVyL._AC_SL1500_.jpg",
-            "handle": "sauneras-sauna-box-infrared-right-light-portable-sauna-tent-b0fpc1ps37"
-          }
-        },
-        "product_13": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Sauna Box Red Light Therapy - Portable Sauna for Home with 15 Levels Fast Heating, 3L/1200W Steamer and Non-Slip Mat, Remote Control for Body Relaxation, Steam Sauna for Indoor Use, 32\" x 32\" x 71\"",
-            "price": "$139.99",
-            "compare_price": "$188.99",
-            "savings": "$49.00",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/71KfN+BsLQL._AC_SL1500_.jpg",
-            "handle": "sauneras-sauna-box-red-light-therapy-portable-sauna-for-home-with-15-l-b0fscnvp1d"
-          }
-        },
-        "product_14": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Infrared Sauna Box for Home, Portable Dry Sauna for Relaxation",
-            "price": "$49.99",
-            "compare_price": "$67.49",
-            "savings": "$17.50",
-            "category": "infrared",
-            "badge": "BEST VALUE",
-            "specs": "Low-EMF Carbon Panels",
-            "image_url": "https://m.media-amazon.com/images/I/71JM4PK63ML._AC_SL1500_.jpg",
-            "handle": "sauneras-infrared-sauna-box-for-home-portable-dry-sauna-for-relaxation-b0hdp42z4k"
-          }
-        },
-        "product_15": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Infrared Sauna Box with 660nm Red Light Therapy & 850nm Infrared Light Panel, 3L Steamer, 9 Temp Levels & 99 Min Timer, 5-Layer Waterproof Insulated, Folding Chair, Personal Sauna for Home(Black)",
-            "price": "$169.99",
-            "compare_price": "$229.49",
-            "savings": "$59.50",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/713PsSAXW7L._AC_SL1500_.jpg",
-            "handle": "sauneras-infrared-sauna-box-with-660nm-red-light-therapy-850nm-infrare-b0h6x84z7h"
-          }
-        },
-        "product_16": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras SmartSteam Kit Pro Portable Home Steam Sauna | 1 Person Sauna Tent",
-            "price": "$230.00",
-            "compare_price": "$310.50",
-            "savings": "$80.50",
-            "category": "steam",
-            "badge": "PREMIUM",
-            "specs": "Foldable Chair Included",
-            "image_url": "https://m.media-amazon.com/images/I/719bi8sJvLL._AC_SL1500_.jpg",
-            "handle": "sauneras-smartsteam-kit-pro-portable-home-steam-sauna-1-person-sauna-t-b0f122w7c2"
-          }
-        },
-        "product_17": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras XL Infrared Sauna Box with True 660 & 850nm Red Light Therapy Lamp, Portable Red Light Sauna for Home, Full Body Steam Tent with 3L 1200w Steamer, 15 Levels Heat, Chair, Remote, 90 Min Timer",
-            "price": "$159.99",
-            "compare_price": "$215.99",
-            "savings": "$56.00",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/81cNUSBEPML._AC_SL1500_.jpg",
-            "handle": "sauneras-xl-infrared-sauna-box-with-true-660-850nm-red-light-therapy-l-b0fvsbhmdn"
-          }
-        },
-        "product_18": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Infrared Sauna Box, Portable Steam Infrared Sauna with Red Light Therapy for Body, Sauna Tent with 660nm & 850nm Infrared Red Light Therapy Lamp, 3L/1200W Steamer, 9 Levels Heat, Timer, Folding Chair",
-            "price": "$229.99",
-            "compare_price": "$310.49",
-            "savings": "$80.50",
-            "category": "infrared",
-            "badge": "PREMIUM",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/81egcOAskwL._AC_SL1500_.jpg",
-            "handle": "sauneras-infrared-sauna-box-portable-steam-infrared-sauna-with-red-lig-b0fyx1sq92"
-          }
-        },
-        "product_19": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Sauna, Steam Sauna Box for Home with 1500W Steamer",
-            "price": "$149.99",
-            "compare_price": "$202.49",
-            "savings": "$52.50",
-            "category": "steam",
-            "badge": "BEST VALUE",
-            "specs": "High-Power Fast Steamer",
-            "image_url": "https://m.media-amazon.com/images/I/713ydC2w9UL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-sauna-steam-sauna-box-for-home-with-1500w-steamer-b0h7jfj9gw"
-          }
-        },
-        "product_20": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Sauna Box, Portable Steam Sauna for Home with 1000W 3L Steamer, 9-Level Temperature Control & Remote, with Foldable Chair, for Relaxation, Detox & Indoor/Outdoor Use (Infrared Red Light Sauna)",
-            "price": "$129.99",
-            "compare_price": "$175.49",
-            "savings": "$45.50",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/71TJwDPZnRL._AC_SL1500_.jpg",
-            "handle": "sauneras-sauna-box-portable-steam-sauna-for-home-with-1000w-3l-steamer-b0gc5m97x5"
-          }
-        },
-        "product_21": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Sauna Thermometer and Hygrometer, Precision Temperature & Humidity Gauge for Portable Steam Sauna Box, Home Infrared Indoor Use Essential Accessory for Enthusiasts",
-            "price": "$14.99",
-            "compare_price": "$20.24",
-            "savings": "$5.25",
-            "category": "accessories",
-            "badge": "ESSENTIAL",
-            "specs": "Precision 2-in-1 Gauge",
-            "image_url": "https://m.media-amazon.com/images/I/71rs8alDALL._AC_SL1500_.jpg",
-            "handle": "sauneras-sauna-thermometer-and-hygrometer-precision-temperature-humidi-b0gyrhfxkv"
-          }
-        },
-        "product_22": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Sauna Thermometer Fahrenheit and Hygrometer with Lanyard Mount",
-            "price": "$11.99",
-            "compare_price": "$16.19",
-            "savings": "$4.20",
-            "category": "accessories",
-            "badge": "ESSENTIAL",
-            "specs": "Precision 2-in-1 Gauge",
-            "image_url": "https://m.media-amazon.com/images/I/71dmSGBwLPL._AC_SL1500_.jpg",
-            "handle": "sauneras-sauna-thermometer-fahrenheit-and-hygrometer-with-lanyard-moun-b0h8dk3tym"
-          }
-        },
-        "product_23": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Sauna Thermometer and Hygrometer, Wall Mounted for Portable Steam Sauna Box",
-            "price": "$4.99",
-            "compare_price": "$6.74",
-            "savings": "$1.75",
-            "category": "accessories",
-            "badge": "ESSENTIAL",
-            "specs": "Precision 2-in-1 Gauge",
-            "image_url": "https://m.media-amazon.com/images/I/71GczavVRXL._AC_SL1500_.jpg",
-            "handle": "sauneras-sauna-thermometer-and-hygrometer-wall-mounted-for-portable-st-b0g2gq39l8"
-          }
-        },
-        "product_24": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Upgraded 2 Person Sauna, Portable Sauna with 5 Layer Waterproof, Portable Steam Sauna Tent with 2 Steamers, 2 Folding Chair, 71\u201dx 49\u201dx 36\"",
-            "price": "$199.98",
-            "compare_price": "$269.97",
-            "savings": "$69.99",
-            "category": "twoperson",
-            "badge": "COUPLES PICK",
-            "specs": "Dual Chair Capacity",
-            "image_url": "https://m.media-amazon.com/images/I/714XhymI+uL._AC_SL1500_.jpg",
-            "handle": "sauneras-upgraded-2-person-sauna-portable-sauna-with-5-layer-waterproo-b0gyjk298k"
-          }
-        },
-        "product_25": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Steam Sauna Tent for Home 3L Infrared Sauna for Indoor, Outdoor, Gym, Spa",
-            "price": "$149.00",
-            "compare_price": "$201.15",
-            "savings": "$52.15",
-            "category": "infrared",
-            "badge": "BEST VALUE",
-            "specs": "Low-EMF Carbon Panels",
-            "image_url": "https://m.media-amazon.com/images/I/71FOZHRs61L._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-steam-sauna-tent-for-home-3l-infrared-sauna-for-indo-b0flxpg7wl"
-          }
-        },
-        "product_26": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Steam Sauna at Home, 9 Levels Heating, Sauna Tent for Home with Steamer and Folding Chair, Sauna for Relaxation, Detoxification, Spa",
-            "price": "$74.99",
-            "compare_price": "$101.24",
-            "savings": "$26.25",
-            "category": "steam",
-            "badge": "BEST VALUE",
-            "specs": "Foldable Chair Included",
-            "image_url": "https://m.media-amazon.com/images/I/71CiEA6VL7L._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-steam-sauna-at-home-9-levels-heating-sauna-tent-for--b0fd6r6syr"
-          }
-        },
-        "product_27": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras Portable Home Steam Infrared Sauna Box, 660nm Red Light Therapy",
-            "price": "$119.99",
-            "compare_price": "$161.99",
-            "savings": "$42.00",
-            "category": "infrared",
-            "badge": "POPULAR",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/71kN8QBGuZL._AC_SL1500_.jpg",
-            "handle": "sauneras-portable-home-steam-infrared-sauna-box-660nm-red-light-therap-b0dpkscbd3"
-          }
-        },
-        "product_28": {
-          "type": "product_item",
-          "settings": {
-            "title": "Sauneras 2 Person Infrared Sauna Box for Home, Portable Steam Sauna Room with 660nm\uff06850nm Red Light Therapy Lamp, 5-Layer Waterproof, 2 Steamers, 2 Folding Chair",
-            "price": "$199.99",
-            "compare_price": "$269.99",
-            "savings": "$70.00",
-            "category": "infrared",
-            "badge": "COUPLES PICK",
-            "specs": "660nm/850nm Red Light",
-            "image_url": "https://m.media-amazon.com/images/I/81hGtyyUXEL._AC_SL1500_.jpg",
-            "handle": "sauneras-2-person-infrared-sauna-box-for-home-portable-steam-sauna-roo-b0gt7q3cfk"
-          }
-        }
-      },
-      "block_order": [
-        "product_01",
-        "product_02",
-        "product_03",
-        "product_04",
-        "product_05",
-        "product_06",
-        "product_07",
-        "product_08",
-        "product_09",
-        "product_10",
-        "product_11",
-        "product_12",
-        "product_13",
-        "product_14",
-        "product_15",
-        "product_16",
-        "product_17",
-        "product_18",
-        "product_19",
-        "product_20",
-        "product_21",
-        "product_22",
-        "product_23",
-        "product_24",
-        "product_25",
-        "product_26",
-        "product_27",
-        "product_28"
-      ]
+      }
     },
     "sauneras_benefits": {
       "type": "sauneras-benefits",
@@ -453,48 +29,48 @@
           "type": "benefit",
           "settings": {
             "icon": "detox",
-            "title": "Deep Cellular Detox",
-            "text": "Induce a profuse, purifying sweat that helps flush accumulated environmental toxins and unclogs deep pores for radiant, clear skin."
+            "title": "Syväpuhdistava Hikoilu & Detox",
+            "text": "Tehokas lämpö avaa ihohuokoset ja käynnistää syvän, puhdistavan hikoilun, joka poistaa kuona-aineita ja kirkastaa ihoa."
           }
         },
         "benefit_muscle": {
           "type": "benefit",
           "settings": {
             "icon": "muscle",
-            "title": "Rapid Muscle & Joint Relief",
-            "text": "Deep penetrating warmth boosts blood circulation by up to 200%, soothing stiff joints and accelerating post-workout muscle recovery."
+            "title": "Nopea Lihas- & Nivelpalautuminen",
+            "text": "Syvälle ulottuva lämpö vilkastuttaa verenkiertoa, rentouttaa kipeitä hartioita ja nopeuttaa palautumista treenin tai työpäivän jälkeen."
           }
         },
         "benefit_calorie": {
           "type": "benefit",
           "settings": {
             "icon": "calorie",
-            "title": "Calorie Burn & Metabolism",
-            "text": "A 20-minute thermal session elevates cardiovascular heart rate mimicking moderate cardio, burning up to 400-600 calories while resting."
+            "title": "Aineenvaihdunta & Kalorien Poltto",
+            "text": "20 minuutin lämpöistunto nostaa sykettä miellyttävästi ja tehostaa aineenvaihduntaa kuluttaen jopa 400–600 kaloria levossa."
           }
         },
         "benefit_sleep": {
           "type": "benefit",
           "settings": {
             "icon": "sleep",
-            "title": "Restorative Sleep & Calm",
-            "text": "Naturally lowers cortisol stress hormones and stimulates melatonin production, priming your body for deep, uninterrupted sleep."
+            "title": "Syvempi Uni & Stressinpoisto",
+            "text": "Iltasauna laskee kehon kortisolitasoja ja valmistelee hermoston syvään, keskeytymättömään yöuneen."
           }
         },
         "benefit_setup": {
           "type": "benefit",
           "settings": {
             "icon": "setup",
-            "title": "Pop-Up in 60 Seconds",
-            "text": "No contractors, zero tools, and no 240V rewiring needed. Simply unfold, plug into standard wall outlet, and enjoy anywhere."
+            "title": "Käyttövalmis 60 Sekunnissa",
+            "text": "Ei remonttia, työkaluja tai putkitöitä. Avaa teltta, kytke tavalliseen 230V pistorasiaan ja nauti lämmöstä missä tahansa huoneessa."
           }
         },
         "benefit_safety": {
           "type": "benefit",
           "settings": {
             "icon": "safety",
-            "title": "Smart Anti-Dry Safety",
-            "text": "Equipped with intelligent dry-run auto shut-off, multi-layer thermal insulation, and low-EMF certified safety."
+            "title": "CE-Turvallinen & Energiapihi",
+            "text": "Varustettu automaattisella virrankatkaisulla, monikerroksisella lämpöeristyksellä sekä matalalla sähkönkulutuksella (vain n. 0,15 € / kerta)."
           }
         }
       },
@@ -507,29 +83,29 @@
         "benefit_safety"
       ],
       "settings": {
-        "sub_heading": "CLINICALLY PROVEN WELLNESS",
-        "heading": "Why 15,000+ Wellness Seekers Choose Sauneras",
-        "description": "Transform your daily wellness routine with targeted hyperthermic therapy engineered for cellular renewal and immediate stress relief.",
+        "sub_heading": "TUTKITUSTI TEHOKAS HYVINVOINTI",
+        "heading": "Miksi Tuhannet Suomalaiset Valitsevat Sauneraksen",
+        "description": "Päivittäinen lämpöhetki kotona ilman taloyhtiön saunavuorojen odottelua tai kalliita sähkölaskuja.",
         "color_scheme": "scheme-2"
       }
     },
     "sauneras_how_it_works": {
       "type": "sauneras-how-it-works",
       "settings": {
-        "sub_heading": "EFFORTLESS SPA RITUAL",
-        "heading": "Your Home Spa in 3 Simple Steps",
-        "description": "Designed for apartments, homes, patios, and bedrooms. No plumbing or expensive remodeling required.",
-        "button_label": "Shop Sauneras Systems",
-        "button_link": "shopify://collections/all",
+        "sub_heading": "VAIVATON KOTIKYLPYLÄ",
+        "heading": "Oma Kotisauna Käyttövalmiina 3 Helpossa Vaiheessa",
+        "description": "Suunniteltu suomalaisiin kerrostaloasuntoihin, omakotitaloihin ja mökeille. Ei remonttia tai kiinteää asennusta.",
+        "button_label": "Tilaa Sauneras™ Kotiin",
+        "button_link": "",
         "color_scheme": "scheme-2"
       }
     },
     "sauneras_comparison": {
       "type": "sauneras-comparison",
       "settings": {
-        "sub_heading": "THE SMART CHOICE",
-        "heading": "Sauneras vs Traditional Wooden Saunas",
-        "description": "Get all the high-heat therapeutic benefits of a traditional Finnish sauna at a fraction of the cost, footprint, and maintenance.",
+        "sub_heading": "ÄLYKÄS VALINTA SUOMALAISEEN KOTIIN",
+        "heading": "Sauneras™ vs. Perinteinen Remonttisauna",
+        "description": "Saat kaikki lämpöterapian ja syvän hikoilun hyödyt murto-osalla perinteisen saunan hinnasta, tilantarpeesta ja sähkönkulutuksesta.",
         "color_scheme": "scheme-1"
       }
     },
@@ -539,28 +115,28 @@
         "rev_1": {
           "type": "review",
           "settings": {
-            "review_title": "Better than our gym sauna by miles!",
-            "review_body": "No more waiting in line or sitting in dirty communal saunas. I put eucalyptus oil in the herbal steamer, pop my arms out to hold my book, and sweat for 25 mins every evening. Sleeping like a baby!",
-            "author_name": "Marcus D.",
-            "product_purchased": "Sauneras Pro 1600W Box"
+            "review_title": "Täydellinen ratkaisu saunattomaan kerrostaloon!",
+            "review_body": "Asun Helsingissä kerrostalokaksiossa, jossa ei ole omaa saunaa. Sauneras mahtuu täydellisesti kylpyhuoneeseen ja taittuu käytön jälkeen kaappiin. Lämpenee nopeasti ja hiki irtoaa kuin oikeassa saunassa!",
+            "author_name": "Mikko L., Helsinki",
+            "product_purchased": "Sauneras™ Kotisauna"
           }
         },
         "rev_2": {
           "type": "review",
           "settings": {
-            "review_title": "Unbelievable sweat and so easy to pack away",
-            "review_body": "Living in a small apartment, I didn't think I could ever own a sauna. It literally folds flat into the closet when not in use. Heats up to 140\u00b0F fast and the fabric quality is thick and durable.",
-            "author_name": "Elena R.",
-            "product_purchased": "Sauneras Home Steam Spa"
+            "review_title": "Unenlaatu parani heti ensimmäisellä viikolla",
+            "review_body": "Käytän tätä 20 minuuttia iltaisin ennen nukkumaanmenoa. Niska-hartiaseudun jumit ovat helpottaneet huomattavasti ja nukun sikeästi aamuun asti. Toimitus Tampereelle tuli parissa päivässä.",
+            "author_name": "Sanna K., Tampere",
+            "product_purchased": "Sauneras™ Kotisauna"
           }
         },
         "rev_3": {
           "type": "review",
           "settings": {
-            "review_title": "Game changer for marathon recovery",
-            "review_body": "As a runner, my joints take a heavy beating. Doing 20 minutes in my Sauneras right after long runs has cut my delayed muscle soreness in half. Best wellness investment I have made.",
-            "author_name": "David K.",
-            "product_purchased": "Sauneras Infrared Pro"
+            "review_title": "Loistava palautumiseen juoksu- ja salitreenin jälkeen",
+            "review_body": "Aktiivisena liikkujana tämä on ollut paras hankinta vuosiin. Kuluttaa murto-osan sähköstä verrattuna isoon kiukaaseen ja on valmis muutamassa minuutissa. Vahva suositus!",
+            "author_name": "Jari V., Espoo",
+            "product_purchased": "Sauneras™ Kotisauna"
           }
         }
       },
@@ -570,19 +146,19 @@
         "rev_3"
       ],
       "settings": {
-        "sub_heading": "PROVEN SATISFACTION",
-        "heading": "Real Sweats. Real Transformation.",
-        "description": "Read how thousands of busy professionals, athletes, and wellness lovers integrated Sauneras into their daily recovery ritual.",
+        "sub_heading": "ASIAKASKOKEMUKSIA SUOMESTA 🇫🇮",
+        "heading": "Mitä Suomalaiset Asiakkaamme Sanovat",
+        "description": "Lue miten suomalaiset kotitaloudet, kuntoilijat ja kerrostaloasukkaat ovat ottaneet Sauneraksen osaksi arjen palautumista.",
         "color_scheme": "scheme-1"
       }
     },
     "sauneras_guarantee": {
       "type": "sauneras-guarantee",
       "settings": {
-        "heading": "Try Sauneras Risk-Free In Your Home For 30 Days",
-        "text": "Take 30 days to sweat, relax, and detox in the privacy of your home. If you don't feel noticeably lighter, sleep more deeply, and recover faster, return it for a 100% refund. We cover the risk so you don't have to.",
-        "button_label": "Claim Your 30-Day Trial",
-        "button_link": "shopify://collections/all",
+        "heading": "Kokeile Saunerasta 30 Päivää Riskittömästi Kotonasi",
+        "text": "Testaa omaa kotisaunaasi rauhassa 30 päivän ajan. Jos et koe syvempää rentoutumista, parempaa unta ja nopeampaa palautumista, voit palauttaa tuotteen ja saat rahasi 100 % takaisin.",
+        "button_label": "Aloita 30 Päivän Kokeilu",
+        "button_link": "",
         "color_scheme": "scheme-1"
       }
     },
@@ -592,43 +168,43 @@
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "How hot does the Sauneras steam box get?",
-            "answer": "The Sauneras high-output steam generator reaches up to 135\u00b0F - 145\u00b0F (57\u00b0C - 63\u00b0C) across 9-15 adjustable digital heat levels. Because steam has 100% relative humidity, 140\u00b0F feels intensely hot and induces a deep, profuse sweat equivalent to a 190\u00b0F traditional dry wooden sauna."
+            "question": "Kuinka lämpimäksi Sauneras™-kotisauna lämpenee?",
+            "answer": "Sauneras saavuttaa jopa 55–65 °C lämpötilan moniportaisella digitaalisella tehonsäädöllä. Koska lämpö ja höyry kohdistuvat tiiviisti eristettyyn tilaan, 60–65 °C tuntuu iholla yhtä tehokkaalta ja hikoiluttavalta kuin 80–90 °C perinteinen sauna."
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "How long does it take to set up and start steaming?",
-            "answer": "The tent uses a pop-up frame that expands in under 60 seconds. Simply place the foldable chair and sweat mat inside, fill the steamer with water, connect the insulated hose, and plug it into any wall outlet. Thick therapeutic steam starts filling the tent in just 5-8 minutes."
+            "question": "Kuinka nopeasti sauna on käyttövalmis?",
+            "answer": "Teltta avautuu pop-up-rakenteen ansiosta alle 60 sekunnissa. Aseta mukana tuleva tuoli ja lattiamatto sisälle, kytke virtajohto tavalliseen suomalaiseen 230V pistorasiaan ja valitse lämpötila. Sauna on lämmin 5–8 minuutissa."
           }
         },
         "faq_3": {
           "type": "faq",
           "settings": {
-            "question": "Can I add essential oils or herbal botanicals?",
-            "answer": "Yes! Every Sauneras system includes a dedicated herbal infusion diffuser box. You can drop natural essential oils (such as eucalyptus, peppermint, lavender) or fresh dried herbs to transform your session into an authentic therapeutic aromatherapy spa."
+            "question": "Toimitatteko kaikkialle Suomeen?",
+            "answer": "Kyllä! Myymme ja toimitamme tilauksia ainoastaan Suomeen. Kaikkiin tilauksiin sisältyy ilmainen ja seurattu toimitus suoraan kotiovelle tai lähimpään noutopisteeseen."
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
-            "question": "How do I clean and store it after a sweat session?",
-            "answer": "The multi-layer Oxford waterproof lining repels moisture. Simply wipe down the floor mat and interior walls with a dry microfiber cloth or antibacterial spray. Leave the zipper open for 10 minutes to dry completely, then fold it flat into its included carry duffle bag."
+            "question": "Miten sauna puhdistetaan ja säilytetään käytön jälkeen?",
+            "answer": "Sisäpinta on valmistettu kosteutta hylkivästä, monikerroksisesta lämpöeristetystä materiaalista. Pyyhi sisäpinta ja lattiamatto kuivalla liinalla käytön jälkeen, anna tuulettua hetki vetoketju avoinna ja taita sauna litteäksi kaappiin tai kantokassiin."
           }
         },
         "faq_5": {
           "type": "faq",
           "settings": {
-            "question": "What is the electrical consumption & safety certification?",
-            "answer": "Sauneras plugs into standard 110V/120V household wall outlets. At 1000W-1600W, a typical 25-minute session costs less than $0.15 in electricity. It features automatic dry-burn shut-off, high-pressure relief valve, and anti-leak certification."
+            "question": "Paljonko laite kuluttaa sähköä ja onko se turvallinen?",
+            "answer": "Sauneras toimii tavallisella 230V suomalaisella pistorasialla. Yksi 20–25 minuutin saunakerta maksaa tyypillisesti vain noin 0,10–0,20 euroa sähköä. Laitteessa on automaattinen ylikuumenemis- ja kuivakäyntisuoja sekä CE-sertifiointi."
           }
         },
         "faq_6": {
           "type": "faq",
           "settings": {
-            "question": "What is your return policy and warranty?",
-            "answer": "Every Sauneras comes with our 30-Day In-Home Money Back Guarantee. If you don't feel noticeably more relaxed and rejuvenated, return it for a prompt refund. You also receive a full 1-Year Manufacturer Warranty on the generator and frame."
+            "question": "Mikä on palautusoikeus ja takuu?",
+            "answer": "Tarjoamme jokaiselle tilaukselle 30 päivän riskittömän kotikokeilun. Jos et ole täysin tyytyväinen, voit palauttaa tuotteen ja saat rahasi 100 % takaisin. Lisäksi tuotteella on 1 vuoden takuu."
           }
         }
       },
@@ -641,16 +217,16 @@
         "faq_6"
       ],
       "settings": {
-        "sub_heading": "FREQUENTLY ASKED QUESTIONS",
-        "heading": "Got Questions? We've Got You Covered.",
-        "description": "Everything you need to know about setting up, operating, and enjoying your Sauneras portable spa.",
+        "sub_heading": "USEIN KYSYTYT KYSYMYKSET",
+        "heading": "Kysyttävää? Tässä Vastaukset.",
+        "description": "Kaikki mitä sinun tarvitsee tietää Sauneras™-kotisaunan käytöstä, toimituksesta Suomeen ja takuusta.",
         "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
     "sauneras_hero",
-    "sauneras_all_products",
+    "sauneras_single_product",
     "sauneras_benefits",
     "sauneras_how_it_works",
     "sauneras_comparison",

@@ -17,19 +17,19 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "🇺🇸 WE SELL & SHIP EXCLUSIVELY TO THE UNITED STATES • Free Fast US Delivery",
+            "text": "🇫🇮 MYYMME JA TOIMITAMME AINOASTAAN SUOMEEN • Ilmainen & seurattu toimitus kotiovelle",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
-            "link": "shopify://collections/all"
+            "link": ""
           }
         },
         "announcement-2": {
           "type": "announcement",
           "settings": {
-            "text": "🔥 FREE US EXPRESS SHIPPING • Ships in 24h from US Warehouse • 30-Day Risk-Free Trial",
+            "text": "🔥 KAMPANJA VOIMASSA • Säästä jopa 35 % tänään • 30 päivän riskitön kotikokeilu",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
-            "link": "shopify://collections/all"
+            "link": ""
           }
         }
       },
@@ -48,8 +48,8 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
         "show_line_separator": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 16,

@@ -6,7 +6,7 @@
           <circle cx="50" cy="50" r="45" stroke="#CF6E3C" stroke-width="3" stroke-dasharray="4,4"/>
           <circle cx="50" cy="50" r="38" fill="#1F362B"/>
           <path d="M35 50 L45 60 L65 40" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="50" y="76" fill="#F79A63" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">30-DAY TRIAL</text>
+          <text x="50" y="76" fill="#F79A63" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">30 PV TAKUU</text>
         </svg>
       </div>
 
@@ -20,7 +20,7 @@
       </div>
 
       <div>
-        <a href="{{ section.settings.button_link | default: routes.all_products_collection_url }}" class="sauneras-btn-primary" style="white-space: nowrap;">
+        <a href="{{ section.settings.button_link | default: '#single-product' }}" class="sauneras-btn-primary" style="white-space: nowrap;">
           {{ section.settings.button_label }}
         </a>
       </div>
@@ -38,19 +38,19 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Try Sauneras Risk-Free For 30 Days"
+      "default": "Kokeile Saunerasta 30 Päivää Riskittömästi Kotonasi"
     },
     {
       "type": "textarea",
       "id": "text",
       "label": "Text",
-      "default": "Sweat in the comfort of your home for a full month. If you aren't feeling deeper relaxation, better sleep, and renewed energy, return it for a 100% prompt refund. No hassles."
+      "default": "Testaa omaa kotisaunaasi rauhassa 30 päivän ajan. Jos et koe syvempää rentoutumista, parempaa unta ja nopeampaa palautumista, palauta tuote ja saat rahasi 100 % takaisin."
     },
     {
       "type": "text",
       "id": "button_label",
       "label": "Button Label",
-      "default": "Claim Your Sauna"
+      "default": "Aloita 30 Päivän Kokeilu"
     },
     {
       "type": "url",

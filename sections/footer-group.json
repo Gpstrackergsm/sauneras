@@ -8,22 +8,22 @@
         "brand_info": {
           "type": "text",
           "settings": {
-            "heading": "SAUNERAS",
-            "subtext": "<p>Empowering daily detoxification, deep muscle recovery, and mindful relaxation through medical-grade portable steam and infrared technology. Engineered for home wellness.</p><p><strong>sauneras.com</strong></p>"
+            "heading": "SAUNERAS™ SUOMI 🇫🇮",
+            "subtext": "<p>Oma henkilökohtainen lämpö- ja hyvinvointikeidas kotiisi. Suunniteltu päivittäiseen palautumiseen, syväpuhdistavaan hikoiluun ja rentoutumiseen suomalaisissa kodeissa.</p><p><strong>🇫🇮 Myymme ja toimitamme ainoastaan Suomeen.</strong><br><strong>sauneras.com</strong></p>"
           }
         },
         "footer_menu_1": {
           "type": "link_list",
           "settings": {
-            "heading": "Explore Sauneras",
+            "heading": "Valikko",
             "menu": "main-menu"
           }
         },
         "footer_text_guarantee": {
           "type": "text",
           "settings": {
-            "heading": "The Sauneras Promise",
-            "subtext": "<p>✓ 30-Day In-Home Risk-Free Trial<br>✓ 1-Year Comprehensive Warranty<br>✓ Free Insured Express Delivery<br>✓ 24/7 Dedicated Wellness Support</p>"
+            "heading": "Sauneras-lupaus",
+            "subtext": "<p>✓ 🇫🇮 Ilmainen toimitus kaikkialle Suomeen<br>✓ 30 päivän riskitön kotikokeilu<br>✓ 1 vuoden kattava takuu<br>✓ 230V CE-hyväksytty suomalainen pistoke</p>"
           }
         }
       },
@@ -35,11 +35,11 @@
       "settings": {
         "color_scheme": "scheme-4",
         "newsletter_enable": true,
-        "newsletter_heading": "Join the Sauneras Wellness Club",
-        "enable_follow_on_shop": true,
+        "newsletter_heading": "Liity Sauneras Suomi -sisäpiiriin ja saa etuja",
+        "enable_follow_on_shop": false,
         "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": true,
         "margin_top": 0,
