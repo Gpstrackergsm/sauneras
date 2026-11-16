@@ -52,7 +52,64 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
+
+  {%- if product.media.size == 0 -%}
+    {%- liquid
+      assign p_handle = product.handle | downcase
+      assign p_title = product.title | downcase
+    -%}
+    {%- if p_handle contains 'punavalo' or p_title contains 'punavalo' or p_title contains 'patja' or p_title contains 'red light' -%}
+      <div class="sauneras-custom-fallback-gallery" style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
+        <div style="position: relative; border-radius: 18px; overflow: hidden; background: #121212; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
+          <img 
+            id="fallbackMainImage" 
+            src="{{ 'sauneras-redlight-mat-1.jpg' | asset_url }}" 
+            alt="{{ product.title | escape }}" 
+            width="1000" 
+            height="750" 
+            loading="eager" 
+            style="width: 100%; height: auto; display: block; object-fit: cover;"
+          >
+          <span style="position: absolute; top: 14px; left: 14px; background: #121212; color: #F79A63; border: 1px solid #CF6E3C; font-size: 0.8rem; font-weight: 800; padding: 5px 12px; border-radius: 999px;">
+            🖤 BLACK FRIDAY -43 %
+          </span>
+          <span style="position: absolute; bottom: 14px; right: 14px; background: rgba(0,0,0,0.8); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 5px 12px; border-radius: 8px; backdrop-filter: blur(4px);">
+            DUAL-SPECTRUM 660nm + 850nm
+          </span>
+        </div>
+
+        <!-- Thumbnail switcher -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+          <button 
+            type="button" 
+            onclick="document.getElementById('fallbackMainImage').src = this.querySelector('img').src; document.querySelectorAll('.sauneras-fb-thumb').forEach(b => b.style.borderColor = '#E5E0D8'); this.style.borderColor = '#CF6E3C';"
+            class="sauneras-fb-thumb"
+            style="padding: 0; border: 2px solid #CF6E3C; border-radius: 12px; overflow: hidden; background: #121212; cursor: pointer; aspect-ratio: 4 / 3;"
+          >
+            <img src="{{ 'sauneras-redlight-mat-1.jpg' | asset_url }}" alt="Studio shot" width="200" height="150" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </button>
+          <button 
+            type="button" 
+            onclick="document.getElementById('fallbackMainImage').src = this.querySelector('img').src; document.querySelectorAll('.sauneras-fb-thumb').forEach(b => b.style.borderColor = '#E5E0D8'); this.style.borderColor = '#CF6E3C';"
+            class="sauneras-fb-thumb"
+            style="padding: 0; border: 2px solid #E5E0D8; border-radius: 12px; overflow: hidden; background: #121212; cursor: pointer; aspect-ratio: 4 / 3;"
+          >
+            <img src="{{ 'sauneras-redlight-mat-2.jpg' | asset_url }}" alt="Lifestyle shot" width="200" height="150" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </button>
+          <button 
+            type="button" 
+            onclick="document.getElementById('fallbackMainImage').src = this.querySelector('img').src; document.querySelectorAll('.sauneras-fb-thumb').forEach(b => b.style.borderColor = '#E5E0D8'); this.style.borderColor = '#CF6E3C';"
+            class="sauneras-fb-thumb"
+            style="padding: 0; border: 2px solid #E5E0D8; border-radius: 12px; overflow: hidden; background: #121212; cursor: pointer; aspect-ratio: 4 / 3;"
+          >
+            <img src="{{ 'sauneras-redlight-mat-3.jpg' | asset_url }}" alt="Storage & bag" width="200" height="150" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </button>
+        </div>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+
+  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter{% if product.media.size == 0 %} hidden{% endif %}">
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
