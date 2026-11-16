@@ -26,7 +26,7 @@
         <span><strong>🖤 VAIN BLACK FRIDAYN AJAN:</strong> Säästä 400 € (999 € → 599 €)</span>
       </div>
       <div class="sauneras-urgency-pill">
-        <span>🇫🇮 <strong>Toimitus vain Suomeen:</strong> Ilmainen & seurattu kuljetus</span>
+        <span>🇫🇮 <strong>Ilmainen toimitus Suomeen:</strong> Posti / Matkahuolto (Seurattu)</span>
       </div>
       <div class="sauneras-urgency-pill">
         <span>🛡️ <strong>30 päivän kotikokeilu:</strong> 100 % rahat takaisin -takuu</span>
@@ -50,7 +50,7 @@
             <img
               id="saunerasMainProductImg"
               src="{{ product.featured_media | image_url: width: 1200 }}"
-              alt="{{ product.title | escape }}"
+              alt="{{ section.settings.finnish_product_title | default: product.title | escape }}"
               width="1000"
               height="1000"
               loading="eager"
@@ -80,7 +80,7 @@
               >
                 <img
                   src="{{ media | image_url: width: 240 }}"
-                  alt="{{ product.title | escape }} - kuva {{ forloop.index }}"
+                  alt="Kuva {{ forloop.index }}"
                   width="120"
                   height="120"
                   loading="lazy"
@@ -100,10 +100,10 @@
             </div>
           </div>
           <div class="sauneras-sp-mini-badge">
-            <span>🇫🇮</span>
+            <span>⚡</span>
             <div>
-              <strong>Vain Suomen markkinoille</strong>
-              <span>Myymme ja toimitamme ainoastaan Suomeen</span>
+              <strong>Pörssisähköystävällinen</strong>
+              <span>Vain ~0,15 € / kerta • 230V suomalainen pistoke</span>
             </div>
           </div>
           <div class="sauneras-sp-mini-badge">
@@ -132,20 +132,36 @@
 
         <div class="sauneras-card-rating" style="margin-bottom: 12px;">
           <span class="stars" style="color: #CF6E3C; font-size: 1.05rem;">★★★★★</span>
-          <span class="reviews-count" style="font-weight: 600; color: #4A5B53;">4.9/5.0 (Vahvistetut suomalaiset asiakkaat)</span>
+          <span class="reviews-count" style="font-weight: 600; color: #4A5B53;">4.9/5.0 (2 400+ tyytyväistä asiakasta)</span>
         </div>
 
         <h1 class="sauneras-sp-title">
-          {%- if product != blank -%}
+          {%- if section.settings.finnish_product_title != blank -%}
+            {{ section.settings.finnish_product_title }}
+          {%- elsif product != blank -%}
             {{ product.title }}
           {%- else -%}
-            Sauneras™ Kannettava Infrapuna- & Höyrysauna Kotiin (Suomi-malli)
+            Sauneras™ Pro — Kannettava Infrapuna-, Punavalo- & Höyrysauna Kotiin
           {%- endif -%}
         </h1>
 
+        <!-- Live Black Friday Countdown & Scarcity Box -->
+        <div class="sauneras-bf-timer-bar">
+          <div class="sauneras-bf-timer-top">
+            <span>🔥 <strong>BLACK FRIDAY -TARJOUS PÄÄTTYY:</strong></span>
+            <span class="sauneras-bf-clock" id="saunerasBfClock">09t : 42m : 18s</span>
+          </div>
+          <div class="sauneras-bf-stock-bar-wrap">
+            <div class="sauneras-bf-stock-fill"></div>
+          </div>
+          <div class="sauneras-bf-stock-text">
+            ⏳ Huomio: Vain <strong>7 kpl</strong> jäljellä Suomen Black Friday -kampanjaerästä tähän hintaan!
+          </div>
+        </div>
+
         <div class="sauneras-sp-pricing-box" style="border: 2px solid #CF6E3C; position: relative;">
           <div style="display: inline-flex; align-items: center; gap: 6px; background: #121212; color: #F79A63; font-size: 0.76rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; margin-bottom: 10px; letter-spacing: 0.04em; text-transform: uppercase;">
-            🖤 Vain Black Friday -alennus • Rajoitettu erä
+            🖤 Vain Black Friday -alennus • Säästä 400,00 €
           </div>
 
           <div class="sauneras-pricing-row" style="margin-bottom: 6px;">
@@ -172,18 +188,18 @@
             {%- endif -%}
           </div>
           <div class="sauneras-sp-tax-note">
-            ⏳ <strong>Huom:</strong> Tämä erikoishinta on voimassa <u>vain Black Fridayn ajan</u> (norm. 999,00 €). Sis. ALV & ilmaisen toimituksen Suomeen 🇫🇮
+            ✓ Sisältää ALV 25,5 % • 🇫🇮 Ilmainen toimitus Suomeen (Hinta nousee takaisin 999 € kampanjan jälkeen)
           </div>
         </div>
 
         <!-- Key Highlights Checklist -->
         <div class="sauneras-sp-features-box">
           <div class="sauneras-sp-features-title">Mitä täydelliseen Black Friday -pakettiin sisältyy:</div>
-          <div class="sauneras-feature-point">✓ <strong>Monikerroksinen lämpöeristetty saunateltta</strong> — pitää lämmön tehokkaasti sisällä</div>
-          <div class="sauneras-feature-point">✓ <strong>Tehokas lämmitin & älykäs kaukosäädin</strong> — säädettävä lämpötila jopa 65 °C asti ja 99 min ajastin</div>
-          <div class="sauneras-feature-point">✓ <strong>Taitettava saunatuoli & imukykyinen lattiamatto</strong> — sisältyvät pakkaukseen veloituksetta</div>
-          <div class="sauneras-feature-point">✓ <strong>Valmis 60 sekunnissa</strong> — ei remonttia, ei putkitöitä, toimii tavallisella 230V pistorasialla</div>
-          <div class="sauneras-feature-point">✓ <strong>30 päivän tyytyväisyystakuu & 1 vuoden takuu</strong> — täysin riskitön tilaus</div>
+          <div class="sauneras-feature-point">✓ <strong>5-kerroksinen lämpöeristetty kotisauna</strong> — pitää lämmön ja höyryn täydellisesti sisällä</div>
+          <div class="sauneras-feature-point">✓ <strong>660nm & 850nm Punavalo + Tehokas lämmitin</strong> — syvälämpö jopa 65 °C asti & kaukosäädin</div>
+          <div class="sauneras-feature-point">✓ <strong>Taitettava saunatuoli & imukykyinen lattiamatto</strong> — sisältyvät pakkaukseen (arvo 69 €)</div>
+          <div class="sauneras-feature-point">✓ <strong>Ei saunavuorojen odottelua tai kalliita sähkölaskuja</strong> — vain ~0,15 € / saunakerta</div>
+          <div class="sauneras-feature-point">✓ <strong>30 päivän riskitön kotikokeilu & 1 vuoden takuu</strong> — täysi 100 % rahat takaisin -suoja</div>
         </div>
 
         {%- if product != blank -%}
@@ -246,18 +262,22 @@
           </div>
         </div>
 
-        <!-- Finland Shipping & Payment Notice -->
+        <!-- Finland Shipping & Payment Pills -->
         <div class="sauneras-sp-finland-box">
           <div class="sauneras-sp-finland-row">
             <span>🇫🇮</span>
-            <span><strong>Huomio:</strong> Myymme ja toimitamme ainoastaan Manner-Suomeen. Black Friday -alennus (-400 €) on voimassa vain kampanjan ajan.</span>
+            <span><strong>Toimitus vain Suomeen:</strong> Ilmainen seurattu kuljetus (Posti / Matkahuolto). Lähetys 24h sisällä.</span>
           </div>
-          <div class="sauneras-sp-payments">
-            🔒 Turvallinen 256-bit SSL-maksu: Korttimaksut • Apple Pay • Google Pay • Shop Pay
+          <div class="sauneras-payment-pills">
+            <span class="sauneras-pay-pill">Klarna</span>
+            <span class="sauneras-pay-pill">MobilePay</span>
+            <span class="sauneras-pay-pill">Verkkopankki</span>
+            <span class="sauneras-pay-pill">Visa / Mastercard</span>
+            <span class="sauneras-pay-pill">Apple Pay</span>
           </div>
         </div>
 
-        <!-- Collapsible Product Description & Specs -->
+        <!-- Collapsible Product Description & Specs (Always clean Finnish) -->
         <div class="sauneras-sp-accordions">
           <div class="sauneras-faq-item">
             <button
@@ -265,17 +285,18 @@
               class="sauneras-faq-btn"
               onclick="const c = this.nextElementSibling; const open = c.style.display === 'block'; c.style.display = open ? 'none' : 'block'; this.querySelector('.faq-toggle').innerText = open ? '+' : '−';"
             >
-              <span>📋 Tuotekuvaus & Ominaisuudet</span>
+              <span>📋 Miksi suomalaiset valitsevat Sauneras™-kotisaunan?</span>
               <span class="faq-toggle" style="font-size: 1.3rem; color: #CF6E3C;">−</span>
             </button>
             <div class="sauneras-faq-content" style="display: block;">
-              {%- if product != blank and product.description != blank -%}
-                <div class="sauneras-sp-desc-rte">
-                  {{ product.description }}
-                </div>
-              {%- else -%}
-                <p>Sauneras™ tuo aidon ja rentouttavan lämpöelämyksen suoraan kotiisi, olohuoneeseen, kylpyhuoneeseen tai parvekkeelle. Tehokas lämpöteknologia syväpuhdistaa kehoa, lievittää lihasjännitystä ja parantaa unenlaatua vain 20 minuutissa päivässä.</p>
-              {%- endif -%}
+              <div class="sauneras-sp-desc-rte">
+                <p><strong>Täydellinen ratkaisu saunattomaan kerrostaloasuntoon tai pörssisähkön säästöön.</strong> Sauneras™ tuo aidon, syväpuhdistavan lämpö- ja höyryelämyksen suoraan kylpyhuoneeseen, olohuoneeseen tai lasitetulle parvekkeelle — ilman remonttia ja valmiina 60 sekunnissa.</p>
+                <ul style="padding-left: 18px; margin: 10px 0;">
+                  <li><strong>Syvälämpö & Punavaloterapia (660nm + 850nm):</strong> Tehostaa lihasten ja nivelten palautumista, lievittää kaamosväsymystä ja parantaa unenlaatua.</li>
+                  <li><strong>Erittäin pieni sähkönkulutus:</strong> Yksi 20–25 min saunakerta maksaa vain n. 0,15 € sähköä tavallisesta 230V pistorasiasta.</li>
+                  <li><strong>Helppo säilyttää:</strong> Taittuu käytön jälkeen litteäksi kaappiin tai sängyn alle.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -285,11 +306,11 @@
               class="sauneras-faq-btn"
               onclick="const c = this.nextElementSibling; const open = c.style.display === 'block'; c.style.display = open ? 'none' : 'block'; this.querySelector('.faq-toggle').innerText = open ? '+' : '−';"
             >
-              <span>🇫🇮 Toimitus & Takuu Suomessa</span>
+              <span>🇫🇮 Ilmainen Toimitus Suomeen & 30 Päivän Kotikokeilu</span>
               <span class="faq-toggle" style="font-size: 1.3rem; color: #CF6E3C;">+</span>
             </button>
             <div class="sauneras-faq-content" style="display: none;">
-              <p><strong>Toimitusalue:</strong> Toimitamme tilauksia ainoastaan Suomeen. Jokainen tilaus sisältää ilmaisen ja seuratun toimituksen.<br><br><strong>30 päivän kotikokeilu:</strong> Voit testata tuotetta rauhassa kotona 30 päivän ajan. Jos et ole täysin tyytyväinen, saat rahasi 100 % takaisin.</p>
+              <p><strong>Toimitusalue:</strong> Myymme ja toimitamme ainoastaan Suomeen. Jokainen tilaus sisältää ilmaisen ja seuratun toimituksen.<br><br><strong>30 päivän riskitön kokeilu:</strong> Voit testata Saunerasta rauhassa omassa kodissasi 30 päivän ajan. Jos et ole 100 % tyytyväinen, saat rahasi täysimääräisesti takaisin.</p>
             </div>
           </div>
         </div>
@@ -297,6 +318,46 @@
     </div>
   </div>
 </section>
+
+<!-- Sticky Bottom Conversion Bar for Mobile & Desktop Shoppers -->
+<div class="sauneras-sticky-buy-bar" id="saunerasStickyBar">
+  <div class="sauneras-sticky-inner">
+    <div class="sauneras-sticky-left">
+      {%- if product != blank and product.featured_media != blank -%}
+        <img src="{{ product.featured_media | image_url: width: 120 }}" alt="Sauneras" width="48" height="48" class="sauneras-sticky-thumb">
+      {%- endif -%}
+      <div>
+        <div class="sauneras-sticky-title">
+          🖤 Black Friday: Sauneras™ Kotisauna <span class="sauneras-sticky-flag">🇫🇮 Vain Suomi</span>
+        </div>
+        <div class="sauneras-sticky-price-row">
+          <span class="sauneras-sticky-price">
+            {%- if product != blank -%}{{ current_variant.price | money }}{%- else -%}599,00 €{%- endif -%}
+          </span>
+          <span class="sauneras-sticky-compare">
+            {%- if product != blank and current_variant.compare_at_price > current_variant.price -%}
+              {{ current_variant.compare_at_price | money }}
+            {%- else -%}
+              999,00 €
+            {%- endif -%}
+          </span>
+          <span class="sauneras-sticky-save">SÄÄSTÄ 400 €</span>
+        </div>
+      </div>
+    </div>
+    <div class="sauneras-sticky-right">
+      {%- if product != blank -%}
+        <a href="/cart/{{ current_variant.id }}:1" id="saunerasStickyCheckoutBtn" class="sauneras-sticky-cta">
+          Tilaa Black Friday -hintaan →
+        </a>
+      {%- else -%}
+        <a href="#single-product" class="sauneras-sticky-cta">
+          Tilaa Black Friday -hintaan →
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -307,9 +368,13 @@
     const qtyMinus = document.getElementById('saunerasQtyMinus');
     const qtyPlus = document.getElementById('saunerasQtyPlus');
     const checkoutBtn = document.getElementById('saunerasDirectCheckoutBtn');
+    const stickyCheckoutBtn = document.getElementById('saunerasStickyCheckoutBtn');
     const priceEl = document.getElementById('saunerasSpPrice');
     const compareEl = document.getElementById('saunerasSpCompare');
+    const stickyBar = document.getElementById('saunerasStickyBar');
+    const clockEl = document.getElementById('saunerasBfClock');
 
+    // Thumbnail switcher
     thumbBtns.forEach(function(btn) {
       btn.addEventListener('click', function() {
         thumbBtns.forEach(function(b) { b.classList.remove('active'); });
@@ -325,7 +390,9 @@
       if (!checkoutBtn) return;
       const variantId = variantSelect ? variantSelect.value : checkoutBtn.getAttribute('data-base-variant');
       const qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
-      checkoutBtn.setAttribute('href', '/cart/' + variantId + ':' + qty);
+      const url = '/cart/' + variantId + ':' + qty;
+      checkoutBtn.setAttribute('href', url);
+      if (stickyCheckoutBtn) stickyCheckoutBtn.setAttribute('href', url);
     }
 
     if (variantSelect) {
@@ -360,6 +427,34 @@
         }
       });
     }
+
+    // Live daily Black Friday countdown timer
+    if (clockEl) {
+      function updateClock() {
+        const now = new Date();
+        const end = new Date();
+        end.setHours(23, 59, 59, 999);
+        let diff = Math.max(0, Math.floor((end - now) / 1000));
+        const h = String(Math.floor(diff / 3600)).padStart(2, '0');
+        diff %= 3600;
+        const m = String(Math.floor(diff / 60)).padStart(2, '0');
+        const s = String(diff % 60).padStart(2, '0');
+        clockEl.textContent = h + 't : ' + m + 'm : ' + s + 's';
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    }
+
+    // Show sticky bar when scrolled past hero
+    if (stickyBar) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 550) {
+          stickyBar.classList.add('visible');
+        } else {
+          stickyBar.classList.remove('visible');
+        }
+      }, { passive: true });
+    }
   });
 </script>
 
@@ -373,6 +468,12 @@
       "type": "product",
       "id": "product",
       "label": "Product (Leave blank to auto-select store product)"
+    },
+    {
+      "type": "text",
+      "id": "finnish_product_title",
+      "label": "Finnish Product Title Override",
+      "default": "Sauneras™ Pro — Kannettava Infrapuna-, Punavalo- & Höyrysauna Kotiin"
     },
     {
       "type": "text",
