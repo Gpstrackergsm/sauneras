@@ -10,3 +10,7 @@ Thumbs.db
 .shopify
 node_modules
 *.zip
+# Media files on desktop
+*.mp4
+/facebook-*
+/sauneras-redlight-mat-*.jpg

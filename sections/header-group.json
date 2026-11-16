@@ -17,10 +17,10 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "🖤 BLACK FRIDAY -TARJOUS: Säästä 400 € (Norm. 999 € → Nyt 599 €) • Alennus voimassa vain Black Fridayn ajan!",
+            "text": "🖤 BLACK FRIDAY -TARJOUS: Säästä jopa 400 € • Punavalopatjat (199 €) & Puusaunat (599 €) • Vain Black Fridayn ajan!",
             "text_alignment": "center",
             "color_scheme": "scheme-4",
-            "link": ""
+            "link": "#valitse-malli"
           }
         },
         "announcement-2": {

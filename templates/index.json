@@ -3,14 +3,23 @@
     "sauneras_hero": {
       "type": "sauneras-hero",
       "settings": {
-        "badge_text": "🖤 BLACK FRIDAY SUOMI • SÄÄSTÄ 400 € (999 € → 599 €)",
-        "heading": "Oma luonnonpuinen [highlight]infrapunasauna[/highlight] suoraan kotiisi",
-        "subheading": "Hyödynnä vuoden suurin Black Friday -tarjous (-400 €)! 1350 W:n luonnollinen puinen kaukoinfrapunasauna tuo syvälämmön, tehokkaan lihaspalautumisen ja rentoutumisen kotiisi ilman remonttia. Alennus voimassa vain Black Fridayn ajan.",
-        "primary_button_label": "Hyödynnä Black Friday -etu (-400 €)",
-        "primary_button_link": "",
-        "secondary_button_label": "Katso miten se toimii",
-        "secondary_button_link": "",
+        "badge_text": "🖤 BLACK FRIDAY SUOMI • SÄÄSTÄ JOPA 400 €",
+        "heading": "Kotimaista Hyvinvointia & [highlight]Syvälämpöä[/highlight] Suomen Talveen",
+        "subheading": "Koe syvälämmön ja punavaloterapian tutkitut terveyshyödyt kotonasi. Valitse suosittu Koko Kehon Punavalopatja (199 €) tai ylellinen Luonnonpuinen Infrapunasauna (599 €). Ilmainen toimitus vain Suomeen ja 30 päivän riskitön kokeilujakso.",
+        "primary_button_label": "Tutustu Black Friday -malleihin →",
+        "primary_button_link": "#valitse-malli",
+        "secondary_button_label": "Lue lisää terveyshyödyistä",
+        "secondary_button_link": "#benefits",
         "color_scheme": "scheme-4"
+      }
+    },
+    "sauneras_duo_showcase": {
+      "type": "sauneras-duo-showcase",
+      "settings": {
+        "sub_heading": "🖤 VIRALLINEN BLACK FRIDAY -MALLISTO",
+        "heading": "Valitse Sauneras™ Hyvinvointiratkaisusi",
+        "description": "Molemmat mallit hyödyntävät tutkittua syvälämpöä ja valoterapiaa kehon palautumiseen, unen parantamiseen ja kaamosväsymyksen lievitykseen.",
+        "color_scheme": "scheme-1"
       }
     },
     "sauneras_single_product": {
@@ -227,6 +236,7 @@
   },
   "order": [
     "sauneras_hero",
+    "sauneras_duo_showcase",
     "sauneras_single_product",
     "sauneras_benefits",
     "sauneras_how_it_works",
