@@ -4,8 +4,8 @@
       "type": "sauneras-hero",
       "settings": {
         "badge_text": "🖤 BLACK FRIDAY SUOMI • SÄÄSTÄ 400 € (999 € → 599 €)",
-        "heading": "Oma henkilökohtainen [highlight]lämpökeidas[/highlight] suoraan kotiisi",
-        "subheading": "Hyödynnä vuoden suurin Black Friday -tarjous (-400 €)! Nauti syvärentouttavasta lämmöstä, tehokkaasta lihaspalautumisesta ja puhtaasta hikoilusta omassa kodissasi vain 20 minuutissa päivässä. Alennus voimassa vain Black Fridayn ajan.",
+        "heading": "Oma luonnonpuinen [highlight]infrapunasauna[/highlight] suoraan kotiisi",
+        "subheading": "Hyödynnä vuoden suurin Black Friday -tarjous (-400 €)! 1350 W:n luonnollinen puinen kaukoinfrapunasauna tuo syvälämmön, tehokkaan lihaspalautumisen ja rentoutumisen kotiisi ilman remonttia. Alennus voimassa vain Black Fridayn ajan.",
         "primary_button_label": "Hyödynnä Black Friday -etu (-400 €)",
         "primary_button_link": "",
         "secondary_button_label": "Katso miten se toimii",
@@ -16,10 +16,10 @@
     "sauneras_single_product": {
       "type": "sauneras-single-product",
       "settings": {
-        "finnish_product_title": "Sauneras™ Pro — Kannettava Infrapuna-, Punavalo- & Höyrysauna Kotiin (Suomi-malli)",
+        "finnish_product_title": "Sauneras™ — 1350 W Luonnollinen Puinen Kaukoinfrapunasauna Sisätiloihin",
         "sub_heading": "🖤 VIRALLINEN BLACK FRIDAY -TARJOUS (-40 %)",
-        "heading": "Tilaa Sauneras™ Kotisauna Black Friday -hintaan",
-        "description": "Tämä 400 € alennus (norm. 999,00 € → nyt 599,00 €) on voimassa ainoastaan Black Friday -kampanjan ajan Suomen asiakkaille. Sisältää ilmaisen toimituksen sekä 30 päivän riskittömän kokeilujakson.",
+        "heading": "Tilaa Sauneras™ Puinen Infrapunasauna Black Friday -hintaan",
+        "description": "Tämä 400 € alennus (norm. 999,00 € → nyt 599,00 €) on voimassa ainoastaan Black Friday -kampanjan ajan Suomen asiakkaille. Sisältää ilmaisen kotiinkuljetuksen sekä 30 päivän riskittömän kokeilujakson.",
         "color_scheme": "scheme-1"
       }
     },
@@ -30,8 +30,8 @@
           "type": "benefit",
           "settings": {
             "icon": "detox",
-            "title": "Syväpuhdistava Hikoilu & Detox",
-            "text": "Tehokas lämpö avaa ihohuokoset ja käynnistää syvän, puhdistavan hikoilun, joka poistaa kuona-aineita ja kirkastaa ihoa."
+            "title": "Syväpuhdistava Kaukoinfrapunalämpö",
+            "text": "Kaukoinfrapunasäteily lämmittää kehoa suoraan syvältä, käynnistäen tehokkaan hikoilun, joka poistaa kuona-aineita ja kirkastaa ihoa miellyttävässä lämpötilassa."
           }
         },
         "benefit_muscle": {
@@ -39,7 +39,7 @@
           "settings": {
             "icon": "muscle",
             "title": "Nopea Lihas- & Nivelpalautuminen",
-            "text": "Syvälle ulottuva lämpö vilkastuttaa verenkiertoa, rentouttaa kipeitä hartioita ja nopeuttaa palautumista treenin tai työpäivän jälkeen."
+            "text": "1350 W:n syvälämpö vilkastuttaa verenkiertoa, rentouttaa kipeitä hartioita ja selkää sekä nopeuttaa palautumista treenin tai työpäivän jälkeen."
           }
         },
         "benefit_calorie": {
@@ -47,31 +47,31 @@
           "settings": {
             "icon": "calorie",
             "title": "Aineenvaihdunta & Kalorien Poltto",
-            "text": "20 minuutin lämpöistunto nostaa sykettä miellyttävästi ja tehostaa aineenvaihduntaa kuluttaen jopa 400–600 kaloria levossa."
+            "text": "25 minuutin infrapunasauna nostaa sykettä miellyttävästi ja tehostaa aineenvaihduntaa kuluttaen jopa 400–600 kaloria samalla kun rentoudut."
           }
         },
         "benefit_sleep": {
           "type": "benefit",
           "settings": {
             "icon": "sleep",
-            "title": "Syvempi Uni & Stressinpoisto",
-            "text": "Iltasauna laskee kehon kortisolitasoja ja valmistelee hermoston syvään, keskeytymättömään yöuneen."
+            "title": "Syvempi Uni & Kaamosväsymyksen Lievitys",
+            "text": "Iltasauna laskee kehon kortisolitasoja, poistaa stressiä ja valmistelee hermoston syvään, keskeytymättömään yöuneen."
           }
         },
         "benefit_setup": {
           "type": "benefit",
           "settings": {
             "icon": "setup",
-            "title": "Käyttövalmis 60 Sekunnissa",
-            "text": "Ei remonttia, työkaluja tai putkitöitä. Avaa teltta, kytke tavalliseen 230V pistorasiaan ja nauti lämmöstä missä tahansa huoneessa."
+            "title": "Ei Remonttia tai Rakennuslupia",
+            "text": "Aito luonnonpuinen saunakabiini kootaan helposti valmiista elementeistä ja kytketään suoraan tavalliseen 230V pistorasiaan."
           }
         },
         "benefit_safety": {
           "type": "benefit",
           "settings": {
             "icon": "safety",
-            "title": "CE-Turvallinen & Energiapihi",
-            "text": "Varustettu automaattisella virrankatkaisulla, monikerroksisella lämpöeristyksellä sekä matalalla sähkönkulutuksella (vain n. 0,15 € / kerta)."
+            "title": "1350W Energiapihi & Matala EMF",
+            "text": "Kuluttaa vain murto-osan perinteisen 6–9 kW sähkökiukaan sähköstä (n. 0,15–0,25 € / saunakerta). Varustettu ylikuumenemissuojalla ja CE-sertifioinnilla."
           }
         }
       },
@@ -85,8 +85,8 @@
       ],
       "settings": {
         "sub_heading": "TUTKITUSTI TEHOKAS HYVINVOINTI",
-        "heading": "Miksi Tuhannet Suomalaiset Valitsevat Sauneraksen",
-        "description": "Päivittäinen lämpöhetki kotona ilman taloyhtiön saunavuorojen odottelua tai kalliita sähkölaskuja.",
+        "heading": "Miksi Suomalaiset Valitsevat Sauneras™ Kaukoinfrapunasaunan",
+        "description": "Nauti oman puusaunan tunnelmasta ja infrapunalämmön terveyshyödyistä joka päivä — ilman taloyhtiön saunavuoroja tai suuria sähkölaskuja.",
         "color_scheme": "scheme-2"
       }
     },
@@ -94,9 +94,9 @@
       "type": "sauneras-how-it-works",
       "settings": {
         "sub_heading": "VAIVATON KOTIKYLPYLÄ",
-        "heading": "Oma Kotisauna Käyttövalmiina 3 Helpossa Vaiheessa",
-        "description": "Suunniteltu suomalaisiin kerrostaloasuntoihin, omakotitaloihin ja mökeille. Ei remonttia tai kiinteää asennusta.",
-        "button_label": "Tilaa Sauneras™ Kotiin",
+        "heading": "Oma Puinen Infrapunasauna Käyttövalmiina 3 Vaiheessa",
+        "description": "Suunniteltu suomalaisiin koteihin, kerrostaloasuntoihin ja mökeille. Ei putkitöitä tai voimavirta-asennusta.",
+        "button_label": "Tilaa Black Friday -hintaan (-400 €)",
         "button_link": "",
         "color_scheme": "scheme-2"
       }
@@ -105,8 +105,8 @@
       "type": "sauneras-comparison",
       "settings": {
         "sub_heading": "ÄLYKÄS VALINTA SUOMALAISEEN KOTIIN",
-        "heading": "Sauneras™ vs. Perinteinen Remonttisauna",
-        "description": "Saat kaikki lämpöterapian ja syvän hikoilun hyödyt murto-osalla perinteisen saunan hinnasta, tilantarpeesta ja sähkönkulutuksesta.",
+        "heading": "Sauneras™ 1350W Infrapunasauna vs. Perinteinen Remonttisauna",
+        "description": "Saat oman luonnonpuisen kotisaunan ja syvälämpöterapian hyödyt murto-osalla perinteisen saunaremontin hinnasta ja sähkönkulutuksesta.",
         "color_scheme": "scheme-1"
       }
     },
@@ -116,28 +116,28 @@
         "rev_1": {
           "type": "review",
           "settings": {
-            "review_title": "Täydellinen ratkaisu saunattomaan kerrostaloon!",
-            "review_body": "Asun Helsingissä kerrostalokaksiossa, jossa ei ole omaa saunaa. Sauneras mahtuu täydellisesti kylpyhuoneeseen ja taittuu käytön jälkeen kaappiin. Lämpenee nopeasti ja hiki irtoaa kuin oikeassa saunassa!",
+            "review_title": "Upea luonnonpuinen sauna ja todella nopea lämpiämään!",
+            "review_body": "Etsin kompaktia puista infrapunasaunaa kotiin, joka ei vaadi kallista remonttia tai voimavirtaa. Sauneras oli helppo koota, puun tuoksu on ihana ja 1350W lämmittimet antavat syvän, rentouttavan hien pintaan.",
             "author_name": "Mikko L., Helsinki",
-            "product_purchased": "Sauneras™ Kotisauna"
+            "product_purchased": "Sauneras™ 1350W Infrapunasauna"
           }
         },
         "rev_2": {
           "type": "review",
           "settings": {
-            "review_title": "Unenlaatu parani heti ensimmäisellä viikolla",
-            "review_body": "Käytän tätä 20 minuuttia iltaisin ennen nukkumaanmenoa. Niska-hartiaseudun jumit ovat helpottaneet huomattavasti ja nukun sikeästi aamuun asti. Toimitus Tampereelle tuli parissa päivässä.",
+            "review_title": "Unenlaatu ja niskajumit paranivat jo ensimmäisellä viikolla",
+            "review_body": "Käytän saunaa 25 minuuttia iltaisin. Infrapunalämpö tuntuu menevän suoraan syvälle hartioihin ja selkään. Lisäksi sähkönkulutus on todella pieni verrattuna vanhaan kiukaaseen!",
             "author_name": "Sanna K., Tampere",
-            "product_purchased": "Sauneras™ Kotisauna"
+            "product_purchased": "Sauneras™ 1350W Infrapunasauna"
           }
         },
         "rev_3": {
           "type": "review",
           "settings": {
-            "review_title": "Loistava palautumiseen juoksu- ja salitreenin jälkeen",
-            "review_body": "Aktiivisena liikkujana tämä on ollut paras hankinta vuosiin. Kuluttaa murto-osan sähköstä verrattuna isoon kiukaaseen ja on valmis muutamassa minuutissa. Vahva suositus!",
+            "review_title": "Huikea hinta-laatusuhde Black Friday -alennuksella",
+            "review_body": "Vastaavat puiset infrapunasaunat maksavat rautakaupoissa yli 1 200 €. 599 € kotiin kuljetettuna oli täysi napakymppi. Koko perhe käyttää tätä lähes päivittäin treenin jälkeen.",
             "author_name": "Jari V., Espoo",
-            "product_purchased": "Sauneras™ Kotisauna"
+            "product_purchased": "Sauneras™ 1350W Infrapunasauna"
           }
         }
       },
@@ -149,7 +149,7 @@
       "settings": {
         "sub_heading": "ASIAKASKOKEMUKSIA SUOMESTA 🇫🇮",
         "heading": "Mitä Suomalaiset Asiakkaamme Sanovat",
-        "description": "Lue miten suomalaiset kotitaloudet, kuntoilijat ja kerrostaloasukkaat ovat ottaneet Sauneraksen osaksi arjen palautumista.",
+        "description": "Lue miten suomalaiset kotitaloudet ja kuntoilijat ovat ottaneet Sauneras™ 1350W -infrapunasaunan osaksi päivittäistä palautumista.",
         "color_scheme": "scheme-1"
       }
     },
@@ -157,8 +157,8 @@
       "type": "sauneras-guarantee",
       "settings": {
         "heading": "Kokeile Saunerasta 30 Päivää Riskittömästi Kotonasi",
-        "text": "Testaa omaa kotisaunaasi rauhassa 30 päivän ajan. Jos et koe syvempää rentoutumista, parempaa unta ja nopeampaa palautumista, voit palauttaa tuotteen ja saat rahasi 100 % takaisin.",
-        "button_label": "Aloita 30 Päivän Kokeilu",
+        "text": "Testaa omaa puista infrapunasaunaasi rauhassa 30 päivän ajan. Jos et koe syvempää rentoutumista, parempaa unta ja nopeampaa palautumista, voit palauttaa tuotteen ja saat rahasi 100 % takaisin.",
+        "button_label": "Tilaa Black Friday -hintaan (-400 €)",
         "button_link": "",
         "color_scheme": "scheme-1"
       }
@@ -169,43 +169,43 @@
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "Kuinka lämpimäksi Sauneras™-kotisauna lämpenee?",
-            "answer": "Sauneras saavuttaa jopa 55–65 °C lämpötilan moniportaisella digitaalisella tehonsäädöllä. Koska lämpö ja höyry kohdistuvat tiiviisti eristettyyn tilaan, 60–65 °C tuntuu iholla yhtä tehokkaalta ja hikoiluttavalta kuin 80–90 °C perinteinen sauna."
+            "question": "Miten 1350W kaukoinfrapunasauna eroaa perinteisestä saunasta?",
+            "answer": "Perinteinen kiuas lämmittää ensin huoneilman 80–100 asteeseen, kun taas kaukoinfrapuna lämmittää suoraan kehoa ja kudoksia syvältä miellyttävässä 45–65 °C lämpötilassa. Tämä tuottaa jopa 2–3 kertaa syvemmän hikoilun ilman raskasta, tukalaa hengitysilmaa."
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "Kuinka nopeasti sauna on käyttövalmis?",
-            "answer": "Teltta avautuu pop-up-rakenteen ansiosta alle 60 sekunnissa. Aseta mukana tuleva tuoli ja lattiamatto sisälle, kytke virtajohto tavalliseen suomalaiseen 230V pistorasiaan ja valitse lämpötila. Sauna on lämmin 5–8 minuutissa."
+            "question": "Vaatiiko sauna putkitöitä, viemäriä tai voimavirtaa?",
+            "answer": "Ei! Sauneras™ on kuivasauna (kaukoinfrapuna), joten se ei tarvitse vesijohtoa, lattiakaivoa tai kosteuseristysremonttia. Se toimii tavallisella suomalaisella 230V pistorasialla."
           }
         },
         "faq_3": {
           "type": "faq",
           "settings": {
-            "question": "Toimitatteko kaikkialle Suomeen?",
-            "answer": "Kyllä! Myymme ja toimitamme tilauksia ainoastaan Suomeen. Kaikkiin tilauksiin sisältyy ilmainen ja seurattu toimitus suoraan kotiovelle tai lähimpään noutopisteeseen."
+            "question": "Toimitatteko ilmaiseksi kaikkialle Suomeen?",
+            "answer": "Kyllä! Myymme ja toimitamme tilauksia ainoastaan Suomeen. Kaikkiin Black Friday -tilauksiin sisältyy ilmainen ja seurattu toimitus."
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
-            "question": "Miten sauna puhdistetaan ja säilytetään käytön jälkeen?",
-            "answer": "Sisäpinta on valmistettu kosteutta hylkivästä, monikerroksisesta lämpöeristetystä materiaalista. Pyyhi sisäpinta ja lattiamatto kuivalla liinalla käytön jälkeen, anna tuulettua hetki vetoketju avoinna ja taita sauna litteäksi kaappiin tai kantokassiin."
+            "question": "Kuinka nopeasti sauna lämpenee ja paljonko se kuluttaa sähköä?",
+            "answer": "1350 W:n infrapunalämmittimet ovat käyttövalmiita jo 5–10 minuutissa. Yksi 25 minuutin saunakerta kuluttaa vain noin 0,55 kWh sähköä, eli tyypillisesti vain noin 0,10–0,20 euroa kerralta!"
           }
         },
         "faq_5": {
           "type": "faq",
           "settings": {
-            "question": "Paljonko laite kuluttaa sähköä ja onko se turvallinen?",
-            "answer": "Sauneras toimii tavallisella 230V suomalaisella pistorasialla. Yksi 20–25 minuutin saunakerta maksaa tyypillisesti vain noin 0,10–0,20 euroa sähköä. Laitteessa on automaattinen ylikuumenemis- ja kuivakäyntisuoja sekä CE-sertifiointi."
+            "question": "Onko sauna helppo koota itse?",
+            "answer": "Kyllä. Luonnonpuinen saunakabiini toimitetaan valmiina modulaarisina seinä- ja kattoelementteinä, jotka kiinnitetään toisiinsa pikalukoilla. Kokoaminen onnistuu helposti kahdelta hengeltä noin 30–45 minuutissa."
           }
         },
         "faq_6": {
           "type": "faq",
           "settings": {
-            "question": "Mikä on palautusoikeus ja takuu?",
-            "answer": "Tarjoamme jokaiselle tilaukselle 30 päivän riskittömän kotikokeilun. Jos et ole täysin tyytyväinen, voit palauttaa tuotteen ja saat rahasi 100 % takaisin. Lisäksi tuotteella on 1 vuoden takuu."
+            "question": "Kuinka kauan 599 € Black Friday -alennus on voimassa?",
+            "answer": "400 € Black Friday -alennus (norm. 999 € → nyt 599 €) on voimassa ainoastaan Black Friday -kampanjan ajan tai niin kauan kuin Suomen kampanjaerää riittää. Tilaukseen kuuluu 30 päivän palautusoikeus ja 1 vuoden takuu."
           }
         }
       },
@@ -220,7 +220,7 @@
       "settings": {
         "sub_heading": "USEIN KYSYTYT KYSYMYKSET",
         "heading": "Kysyttävää? Tässä Vastaukset.",
-        "description": "Kaikki mitä sinun tarvitsee tietää Sauneras™-kotisaunan käytöstä, toimituksesta Suomeen ja takuusta.",
+        "description": "Kaikki mitä sinun tarvitsee tietää Sauneras™ 1350W puisen kaukoinfrapunasaunan käytöstä, asennuksesta ja toimituksesta Suomeen.",
         "color_scheme": "scheme-2"
       }
     }
