@@ -14,7 +14,7 @@
         "enable_language_selector": false
       },
       "blocks": {
-        "announcement-1": {
+        "announcement-bf-sauna": {
           "type": "announcement",
           "settings": {
             "text": "🖤 BLACK FRIDAY -TARJOUS: Säästä 400 € (Norm. 999 € → Nyt 599 €) • Alennus voimassa vain Black Fridayn ajan!",
@@ -34,7 +34,7 @@
         }
       },
       "block_order": [
-        "announcement-1",
+        "announcement-bf-sauna",
         "announcement-2"
       ]
     },

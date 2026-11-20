@@ -1,6 +1,6 @@
 {
   "sections": {
-    "sauneras_hero": {
+    "sauneras_hero_main": {
       "type": "sauneras-hero",
       "settings": {
         "badge_text": "🖤 BLACK FRIDAY SUOMI • SÄÄSTÄ 400 € (999 € → 599 €)",
@@ -113,7 +113,7 @@
     "sauneras_testimonials": {
       "type": "sauneras-testimonials",
       "blocks": {
-        "rev_1": {
+        "rev_tracey": {
           "type": "review",
           "settings": {
             "review_title": "Tee se! Paras sijoitus omaan hyvinvointiin",
@@ -122,7 +122,7 @@
             "product_purchased": "Vahvistettu ostaja • 1 hengen malli (75×90×170 cm)"
           }
         },
-        "rev_2": {
+        "rev_sylvester": {
           "type": "review",
           "settings": {
             "review_title": "Upea sauna yhdelle hengelle",
@@ -131,7 +131,7 @@
             "product_purchased": "Vahvistettu ostaja • 1 hengen malli (75×90×170 cm)"
           }
         },
-        "rev_3": {
+        "rev_nursey": {
           "type": "review",
           "settings": {
             "review_title": "Tähän mennessä loistava!",
@@ -169,9 +169,9 @@
         }
       },
       "block_order": [
-        "rev_1",
-        "rev_2",
-        "rev_3",
+        "rev_tracey",
+        "rev_sylvester",
+        "rev_nursey",
         "rev_4",
         "rev_5",
         "rev_6"
@@ -256,7 +256,7 @@
     }
   },
   "order": [
-    "sauneras_hero",
+    "sauneras_hero_main",
     "sauneras_single_product",
     "sauneras_benefits",
     "sauneras_how_it_works",
