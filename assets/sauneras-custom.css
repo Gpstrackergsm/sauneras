@@ -1403,3 +1403,15 @@ cart-drawer.active .drawer__inner {
 
 
 
+
+/* QA fixes: mobile sticky bar spacing and footer newsletter contrast */
+@media (max-width: 640px) {
+  body { padding-bottom: 84px; }
+}
+.footer-block--newsletter .footer-block__heading,
+.footer__content-top .footer-block__newsletter h2,
+.footer__content-top .footer-block__newsletter .h3,
+.footer__content-top .footer-block__newsletter p,
+.footer__content-top .footer-block__newsletter label {
+  color: #FFFFFF !important;
+}

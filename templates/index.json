@@ -166,7 +166,7 @@
       "type": "sauneras-guarantee",
       "settings": {
         "heading": "Kokeile Saunerasta 30 Päivää Riskittömästi Kotonasi",
-        "text": "Testaa omaa puista infrapunasaunaasi rauhassa 30 päivän ajan. Jos et koe syvempää rentoutumista, parempaa unta ja nopeampaa palautumista, voit palauttaa tuotteen ja saat rahasi 100 % takaisin.",
+        "text": "Testaa Sauneras-tuotettasi rauhassa 30 päivän ajan. Jos et ole tyytyväinen, voit palauttaa tuotteen palautusehtojen mukaisesti ja saat rahasi takaisin.",
         "button_label": "Tilaa Black Friday -hintaan (-400 €)",
         "button_link": "",
         "color_scheme": "scheme-1"
@@ -229,7 +229,7 @@
       "settings": {
         "sub_heading": "USEIN KYSYTYT KYSYMYKSET",
         "heading": "Kysyttävää? Tässä Vastaukset.",
-        "description": "Kaikki mitä sinun tarvitsee tietää Sauneras™ 1350W puisen kaukoinfrapunasaunan käytöstä, asennuksesta ja toimituksesta Suomeen.",
+        "description": "Kaikki mitä sinun tarvitsee tietää Sauneras™-tuotteista, käytöstä ja toimituksesta Suomeen (FAQ-vastaukset koskevat pääosin 1350W puusaunaa).",
         "color_scheme": "scheme-2"
       }
     }
