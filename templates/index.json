@@ -116,40 +116,70 @@
         "rev_1": {
           "type": "review",
           "settings": {
-            "review_title": "Upea luonnonpuinen sauna ja todella nopea lämpiämään!",
-            "review_body": "Etsin kompaktia puista infrapunasaunaa kotiin, joka ei vaadi kallista remonttia tai voimavirtaa. Sauneras oli helppo koota, puun tuoksu on ihana ja 1350W lämmittimet antavat syvän, rentouttavan hien pintaan.",
-            "author_name": "Mikko L., Helsinki",
-            "product_purchased": "Sauneras™ 1350W Infrapunasauna"
+            "review_title": "Tee se! Paras sijoitus omaan hyvinvointiin",
+            "review_body": "Rakastan tätä! Olin aluksi skeptinen, mutta olen todella tyytyväinen tähän tuotteeseen. Käytän sitä aina kun ehdin työpäivän ja treenin jälkeen. Se on oma rauhoittumispaikkani — paras sijoitus, jonka olen tehnyt omaan hyvinvointiini!",
+            "author_name": "Tracey D.",
+            "product_purchased": "Vahvistettu ostaja • 1 hengen malli (75×90×170 cm)"
           }
         },
         "rev_2": {
           "type": "review",
           "settings": {
-            "review_title": "Unenlaatu ja niskajumit paranivat jo ensimmäisellä viikolla",
-            "review_body": "Käytän saunaa 25 minuuttia iltaisin. Infrapunalämpö tuntuu menevän suoraan syvälle hartioihin ja selkään. Lisäksi sähkönkulutus on todella pieni verrattuna vanhaan kiukaaseen!",
-            "author_name": "Sanna K., Tampere",
-            "product_purchased": "Sauneras™ 1350W Infrapunasauna"
+            "review_title": "Upea sauna yhdelle hengelle",
+            "review_body": "En voi kehua tarpeeksi. Helppo yhden hengen pystytys. Olen käyttänyt tätä 7 päivänä viikossa nyt kahden kuukauden ajan — en enää koskaan halua olla ilman tätä.",
+            "author_name": "Sylvester",
+            "product_purchased": "Vahvistettu ostaja • 1 hengen malli (75×90×170 cm)"
           }
         },
         "rev_3": {
           "type": "review",
           "settings": {
-            "review_title": "Huikea hinta-laatusuhde Black Friday -alennuksella",
-            "review_body": "Vastaavat puiset infrapunasaunat maksavat rautakaupoissa yli 1 200 €. 599 € kotiin kuljetettuna oli täysi napakymppi. Koko perhe käyttää tätä lähes päivittäin treenin jälkeen.",
-            "author_name": "Jari V., Espoo",
-            "product_purchased": "Sauneras™ 1350W Infrapunasauna"
+            "review_title": "Tähän mennessä loistava!",
+            "review_body": "Saimme tämän tänään ja kokosimme heti. Mieheni sanoi kokoamisen olleen melko helppoa. Tein juuri 15 minuutin saunan ja oli ihanan lämmin — lämpenee todella nopeasti! Kaiuttimet ovat hyvänlaatuiset ja valot hienot. Todella upea sauna, jos kotona ei ole paljoa tilaa.",
+            "author_name": "NurseyK",
+            "product_purchased": "Vahvistettu ostaja • 1 hengen malli (75×90×170 cm)"
+          }
+        },
+        "rev_4": {
+          "type": "review",
+          "settings": {
+            "review_title": "Hieno tuote päivittäiseen käyttöön",
+            "review_body": "Tämä sauna on mahtava! Veljeni ja vaimoni ovat käyttäneet sitä yli kuukauden ajan päivittäin. Kokoaminen kesti vain 20 minuuttia ja sauna oli heti käytössä. Suosittelen kaikille.",
+            "author_name": "Joseph M.",
+            "product_purchased": "Vahvistettu ostaja • 1 hengen malli (75×90×170 cm)"
+          }
+        },
+        "rev_5": {
+          "type": "review",
+          "settings": {
+            "review_title": "100 tähteä! Lämpenee nopeasti",
+            "review_body": "Tämä kompakti sauna antaa todella hyvän lämmön! Lämpenee nopeasti ja on yllättävän tilava yhden hengen saunaksi. Helppo asentaa ja Bluetooth-kaiuttimet toimivat loistavasti. Antaisin 100 tähteä, jos voisin!",
+            "author_name": "Wernher S.",
+            "product_purchased": "Vahvistettu ostaja • 1 hengen malli"
+          }
+        },
+        "rev_6": {
+          "type": "review",
+          "settings": {
+            "review_title": "Ammattimaisesti tehty — ylitti odotukset!",
+            "review_body": "Yhden hengen saunani saapui odotettua aikaisemmin. Kun avasin laatikot ja kävin osat läpi ohjeiden mukaan, jokainen pala oli todella kauniisti tehty ja sopi täydellisesti yhteen. Rakastamme saunaamme.",
+            "author_name": "Jeff B.",
+            "product_purchased": "Vahvistettu ostaja • 1 hengen malli"
           }
         }
       },
       "block_order": [
         "rev_1",
         "rev_2",
-        "rev_3"
+        "rev_3",
+        "rev_4",
+        "rev_5",
+        "rev_6"
       ],
       "settings": {
-        "sub_heading": "ASIAKASKOKEMUKSIA SUOMESTA 🇫🇮",
-        "heading": "Mitä Suomalaiset Asiakkaamme Sanovat",
-        "description": "Lue miten suomalaiset kotitaloudet ja kuntoilijat ovat ottaneet Sauneras™ 1350W -infrapunasaunan osaksi päivittäistä palautumista.",
+        "sub_heading": "VAHVISTETUT TUOTEARVIOT",
+        "heading": "Mitä Ostajat Sanovat Tästä Saunasta",
+        "description": "Kansainvälisiä vahvistettujen ostajien arvioita samasta 1 hengen 1350 W kaukoinfrapunasaunasta (suomennettu).",
         "color_scheme": "scheme-1"
       }
     },
