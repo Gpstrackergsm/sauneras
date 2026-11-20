@@ -1415,3 +1415,19 @@ cart-drawer.active .drawer__inner {
 .footer__content-top .footer-block__newsletter label {
   color: #FFFFFF !important;
 }
+
+/* Mobile menu drawer left-clipping fix */
+@media (max-width: 749px) {
+  header-drawer {
+    margin-left: 0 !important;
+  }
+  .menu-drawer {
+    left: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+  .menu-drawer__menu-item {
+    padding-left: 2.4rem !important;
+    padding-right: 2.4rem !important;
+  }
+}
