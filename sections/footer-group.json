@@ -5,11 +5,11 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "brand_info": {
+        "brand_info_fi": {
           "type": "text",
           "settings": {
             "heading": "SAUNERAS™ SUOMI 🇫🇮",
-            "subtext": "<p>Oma henkilökohtainen lämpö- ja hyvinvointikeidas kotiisi. Suunniteltu päivittäiseen palautumiseen, syväpuhdistavaan hikoiluun ja rentoutumiseen suomalaisissa kodeissa.</p><p><strong>🇫🇮 Myymme ja toimitamme ainoastaan Suomeen.</strong><br><strong>sauneras.com</strong></p>"
+            "subtext": "<p>Oma henkilökohtainen lämpö- ja hyvinvointikeidas kotiisi. Suunniteltu päivittäiseen palautumiseen, syväpuhdistavaan hikoiluun ja rentoutumiseen suomalaisissa kodeissa.</p><p><strong>🇫🇮 Myymme ja toimitamme ainoastaan Suomeen.</strong><br>Asiakaspalvelu: <a href=\"mailto:sales@sauneras.com\">sales@sauneras.com</a><br><strong>sauneras.com</strong></p>"
           }
         },
         "footer_menu_1": {
@@ -28,7 +28,7 @@
         }
       },
       "block_order": [
-        "brand_info",
+        "brand_info_fi",
         "footer_menu_1",
         "footer_text_guarantee"
       ],
